@@ -1,0 +1,377 @@
+\documentclass[11pt]{amsart}
+
+%Diagram package
+\usepackage[dvips,midshaft,nohug,silent,heads=littlevee]{diagrams}
+
+% Taylor diagram arrows
+\newarrow{Mapsto}{mapsto}--->
+\newarrow{Equals}=====
+\newarrow{Dashto}{}{dash}{}{dash}>
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+
+% The following causes equations to be numbered within sections
+\numberwithin{equation}{section}
+\theoremstyle{plain} %% This is the default, anyway
+\newtheorem{thm}[equation]{Theorem}
+\newtheorem{cor}[equation]{Corollary}
+\newtheorem{lem}[equation]{Lemma}
+\newtheorem{prop}[equation]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[equation]{Definition}
+\newtheorem{rmk}[equation]{Remark}
+
+\usetikzlibrary{matrix}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.pathmorphing}
+
+\newcommand{\D}{\mathbf{D}}
+\newcommand{\DM}{\mathbf{DM}^{\mathrm{eff}}}
+\newcommand{\DMm}{\mathbf{DM}^{\mathrm{eff},-}}
+\newcommand{\A}{\mathbb{A}^1}
+\newcommand{\Gm}{\mathbb{A}^1 \setminus \{0\}}
+\newcommand{\HI}{HI}
+\newcommand{\tDM}{\otimes_{L}^{tr}}
+\newcommand{\homDM}{\mathrm{Hom}_{\DMm}}
+\newcommand{\rhomDM}{\underline{RHom}_{\DMm}}
+\newcommand{\rhom}{\underline{RHom}_{\D^-}}
+\renewcommand{\H}{\mathbf{H}}
+\newcommand{\tHI}{\otimes^{\mathrm{Htr}}}
+\newcommand{\homHI}{\mathrm{Hom}_{\HI}}
+\newcommand{\ihomHI}{\underline{Hom}_{\HI}}
+\newcommand{\Ox}{\mathcal{O}^{\times}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\slice}[1]{\nu^{#1}}
+\newcommand{\anis}{a_{\mathrm{Nis}}}
+\newcommand{\sliceHI}{\sigma}
+\newcommand{\SliceHI}{\Sigma}
+\begin{document}
+
+\section{Slice Filtration in $\HI$}
+
+\noindent In the following, we restrict our focus to the category 
+$Cor_k$ of correspondences over a perfect field $k$, and we assume 
+all sheaves and presheaves are defined on the Nisnevich site of 
+$Cor_k$.
+
+Let $\D^-$ be the derived category of bounded above chain 
+complexes of Nisnevich sheaves with transfers. Let $\DMm$ be
+the category of effective motives obtained from $\D^-$ by 
+inverting $\A$-weak equivalences (see \cite{MVW}) By \emph{loc.\ cit.}, $\DMm$ is 
+equivalent to the subcategory $\D_{\HI}^-$ of $\D^-$ consisting of 
+bounded above $\A$-local complexes. To emphasize the connection
+between $\D_{\HI}^-$ and $\DMm$, we will represent objects of
+$\DMm$ as a (co)chain complex of sheaves, e.g. $F^*$.
+
+The category $\DMm$ is closed monoidal; it inherits the tensor
+product and internal hom from $\D^-$, which we represent by
+$\tDM$ and $\rhomDM$ respectively. Furthermore, we write $F^*(n)$ for
+$F^* \tDM \Z(n)$.
+
+Furthermore, $\DMm$ is equipped with a $t$-structure in the sense 
+of \cite{BBD} induced by the $t$-structure on $\D_{\HI}^-$, and 
+we identify the heart of the structure with the category $\HI$ of 
+homotopy invariant sheaves with transfers. In particular, we may 
+regard $\HI$ as a subcategory of $\DMm$, corresponding to the 
+objects of $\D_{\HI}^-$ concentrated in degree 0. We write $F 
+\tDM G$, $\homDM(F, G)$ and $\rhomDM(F, G)$ when $F, G \in \HI$ 
+for the tensor, hom, and internal hom applied to the 
+corresponding objects in $\DM$. Let $\H^0 : \DMm \rightarrow \HI$ 
+be the right adjoint to the inclusion of $\HI$ in $\DMm$.
+
+The category $\HI$ is itself a closed monoidal category. We write 
+we write $\tHI$ and $\ihomHI$ for the tensor and internal hom 
+bifunctors respectively. These functors are related to the tensor 
+and internal hom of $\DMm$ via $\H^0$. Namely, for $F, G \in \HI$,
+\[
+F \tHI G = \H^0(F \tDM G)
+\] 
+and 
+\[
+\ihomHI(F, G) = \H^0\rhomDM(F, G).
+\]
+
+Recall from \cite{HuKa} Section 1 that there is a slice 
+filtration structure on $\DMm$. Writing $\slice{\geq k}\DMm$ for 
+the subcategory of $\DMm$ consisting of $F^* \tDM \Z(k)$, the 
+slice filtration is given by the following tower of subcategories: 
+\[
+\DMm = \slice{\geq 0}\DMm \supset \slice{\geq 1}\DMm
+\supset \slice{\geq 2}\DMm \supset \cdots
+\]
+together with reflection functors $\slice{\geq n}: \DMm 
+\longrightarrow \slice{\geq n}\DMm$ given by $F^* \mapsto 
+\rhomDM(\Z(n), F^*)(n)$. It seems natural to ask: can we obtain 
+the slice filtration structure on $\HI$ by applying $\H^0$ to 
+$\slice{\geq n} \DMm$? 
+
+The answer is ``yes''.
+
+To prove this, we will define the counterpart of $\slice{\geq n}$ 
+in $\HI$. This is obtained from functors $-\tHI\Ox$ and 
+$\ihomHI(\Ox, -)$, which are themselves the counterparts in
+$\HI$ of the functors $-\tDM\Z(1)$ and $\rhomDM(\Z(1), -)$ 
+respectively. As $\Ox \simeq Z(1)[1]$ in $\DMm$, the approach 
+here is to verify that $-\tDM\Z(1)$ and $\rhomDM(\Z(1), -)$ 
+behave well with respect to $\H^0$, assertions which we will make 
+precise presently.
+
+First, since $\Ox \simeq \Z(1)[1]$ in $\DMm$, notice that $-\tHI \Ox$
+is by definition $\H^0(-\tDM \Z(1)[1])$. 
+
+Next, for $F \in \HI$, write $F_{-1}$ for the contraction of $F$,
+which is a sheaf that sends $X$ to $F(X \times (\Gm))/F(X)$
+(see \cite{MVW} 23.5). 
+
+\begin{prop}\label{homhicontract}
+Let $F \in \HI$. Then $\ihomHI(\Ox, F) = F_{-1}$.
+\end{prop}
+
+For $F \in \HI$, the proposition above can be rewritten as 
+\[
+\H^0\rhomDM(\Z(1)[1], F) = F_{-1},
+\] 
+which is a statement about the 0-th cohomology sheaf 
+of the corresponding $\A$-local complex, $\rhom(\Z(1)[1], F)$.
+From this perspective, Proposition \ref{homhicontract} is a
+consequence of the following more general result:
+
+\begin{lem}\label{homhi}
+For any $F^* \in \DMm$,
+\[
+\H^0\rhomDM(\Z(1)[1], F^*) = \rhomDM(\Z(1)[1],  \H^0F^*).
+\]
+In particular, for a homotopy invariant sheaf $F$, 
+we have 
+\[
+\rhomDM(\Z(1)[1], F) = F_{-1}.
+\]
+\end{lem}
+
+\begin{proof}
+(D\'eglise) \cite{Deg08b} Proposition 3.4.5.
+\end{proof}
+
+
+\begin{rmk}
+It makes sense to regard $F_{-1}$ as an object of $\DMm$,
+because, as inferred from above (and can be proven directly),
+the contraction $F_{-1}$ of a homotopy invariant sheaf $F$ is 
+homotopy invariant. 
+\end{rmk}
+
+From these observations, we have the following:
+
+\begin{cor}\label{hiadj}
+The functors $ - \tHI \Ox$ is left adjoint to $\ihomHI(\Ox, -)$.
+\end{cor}
+\begin{proof}
+Fix $F, G \in \HI$. By Proposition \ref{homhicontract}, it 
+suffices to show that $\homHI(F \tHI \Ox, G) \simeq \homHI(F, 
+\ihomHI(\Ox, G)).$ 
+
+By definition $F \tHI \Ox = \H^0(F(1)[1])$ and therefore
+\[
+\homHI(F \tHI \Ox, G) = \homHI(\H^0(F(1)[1]), G).
+\]
+Since $G$ is in the heart of $\DMm$, we have that
+\[
+\homHI(\H^0(F(1)[1]), G) = \homDM(F(1)[1], G).
+\]
+By adjointness of $-\tDM \Z(1)[1]$ and $\rhomDM(\Z(1)[1], -)$,
+\[
+\homDM(F(1)[1], G) = \homDM(F, \rhomDM(\Z(1)[1], G)),
+\]
+and, by Lemma \ref{homhi}, we have that
+\[
+\homDM(F, \rhomDM(\Z(1)[1], G)) = \homDM(F, G_{-1}).
+\]
+Since both $F$ and $G_{-1}$ are in the heart of $\DMm$,
+\[
+\homDM(F, G_{-1}) = \homHI(F, G_{-1}),
+\]
+and the result is established.
+\end{proof}
+
+\begin{cor}
+For $F \in \HI$, the adjunction map 
+\[
+F \longrightarrow \ihomHI(\Ox, F \tHI \Ox)
+\] 
+is a natural isomorphism.
+\end{cor}
+\begin{proof}
+By the Cancellation Theorem for $\DMm$ (\cite{MVW} 16.25), the 
+adjunction map 
+\[
+F^* \longrightarrow \rhomDM(\Z(1)[1], F^*(1)[1]).
+\] 
+is a natural isomorphism. In particular, the map 
+\[
+F \longrightarrow \rhomDM(\Z(1)[1], F(1)[1])
+\]
+is an isomorphism for any $F \in \HI$. Consequently, the sheaf 
+$\H^0 F$ is isomorphic to $\H^0\rhomDM(\Z(1)[1],\allowbreak 
+F(1)[1]).$ However, by Lemma \ref{homhi} the latter is isomorphic 
+to $\ihomHI(\Ox,\allowbreak F \tHI\Ox)$. The corollary now 
+follows from the fact that $F = \H^0 F$.
+\end{proof}
+
+We are now ready to construct the slice filtration on $\HI$. 
+To simplify notations, in the following, for a homotopy invariant
+sheaf $F$, let $L(F)$ denote $F \tHI \Ox$, and $R$ denote 
+$\ihomHI(\Ox, F) = F_{-1}$; for any positive integer $n$, we 
+write $L^n$ and $R^n$ for the $n$-th iterations of $L$ and $R$ 
+respectively.
+
+Let $\SliceHI_{< n} \HI$ denote the full subcategory of $\HI$ 
+consisting of those $F$ where $R^n(F) = 0$. It is clear that we 
+have an ascending tower of subcategories:
+\[
+\SliceHI_{0} \HI \subset \cdots \SliceHI_{< n - 1} \HI \subset 
+\SliceHI_{< n} \HI \subset \cdots \HI.
+\]
+Furthermore, as $(L, R)$ is an adjoint pair, there exists a 
+natural map from $L^nR^n(F)$ to $F$. Let $\sliceHI_{< n}(F)$ represent 
+the cokernel of this map. The association $F \mapsto 
+\sliceHI_{< n}(F)$ is functorial. In fact,
+
+\begin{thm}\label{slicethm}
+The functor $\sliceHI_{< n}$ is left adjoint to the inclusion 
+of $\SliceHI_{< n} \HI$ into $\HI$.
+\end{thm}
+
+The proof of the theorem depends on the following:
+
+\begin{lem}\label{hislice}
+For $F \in \HI$, $\sliceHI_{< n}(F) \in \SliceHI_{< n}\HI$. 
+Furthermore, if $F \in \SliceHI_{< n} \HI$, $\sliceHI_{<n}(F)
+\simeq F$.
+\end{lem}
+\begin{proof}
+By definition, $\sliceHI_{<n}(F) \in \SliceHI_{< n}\HI$ if
+and only if $R^n \sliceHI_{<n}(F) = 0$.
+
+Now, by \cite{Deg10} Lemma 1.14 the functor $R$ is exact. Applying 
+$R^n$ to the exact sequence
+\begin{equation}\label{sliceExSeq}
+L^nR^n F \longrightarrow F \longrightarrow \sliceHI_{< n}(F)
+\longrightarrow 0,
+\end{equation}
+we again have an exact sequence:
+\[
+R^nL^nR^n (F) \longrightarrow R^n(F) \longrightarrow 
+R^n\sliceHI_{< n}(F) \longrightarrow 0.
+\]
+But the map $R^nL^nR^n(F) \rightarrow R^n(F)$ is an isomorphism 
+by Lemma \ref{hiadj}. Hence, $R^n\sliceHI_{< n}(F) = 0$.
+
+For the second assertion, if $F \in \SliceHI_{< n} \HI$,
+by definition we have $L^nR^nF = 0$. The exact sequence 
+(\ref{sliceExSeq}) gives us the desired isomorphism.
+\end{proof}
+
+We now prove Theorem \ref{slicethm}.
+
+\begin{proof}[Proof of Theorem \ref{slicethm}]
+Fix $F \in \HI$ and $G \in \SliceHI_{<n}\HI$. Consider
+$f: F \to G$. Applying $\sliceHI_{<n}$, we have a map
+$\sliceHI_{<n}(f): \sliceHI_{<n}(F) \to \sliceHI_{<n}(G)$.
+Since $G \in \SliceHI_{<n}\HI$, by Lemma \ref{hislice},
+$\sliceHI_{<n}(G) \simeq G$. Composing with $\sliceHI_{<n}(f)$,
+we obtain a map $\sliceHI_{<n}(F) \to G$, which, by abuse of
+notation, we write as $\sliceHI_{<n}(f)$.
+
+Let $\phi: \homHI(F, G) \longrightarrow
+\mathrm{Hom}_{\SliceHI_{< n}\HI}(\sliceHI_{<n}(F), G)$
+represent the map $f \mapsto \sliceHI_{< n}(f)$. To show that 
+$\phi$ is injective, notice that we have the following 
+commutative diagram:
+\begin{equation*}
+\begin{diagram}[height=0.8cm]
+ F & \rTo^{f}   && G \\ 
+      \dTo{}    &&     & \dTo{\simeq}  \\
+\sliceHI_{<n}(F) &&\rTo^{\sliceHI_{< n}(f)} & \sliceHI_{<n}(G)
+\end{diagram}
+\end{equation*}
+
+Since $G \to \sliceHI_{< n}(G)$ is an isomorphism, 
+$\sliceHI_{<n}(f) = 0$ implies that $f = 0$.
+
+For surjectivity of $\phi$, fix $g: \sliceHI_{<n}(F) \to G$.
+Composing with $F \to \sliceHI_{<n}(F)$ gives the desired
+map in $\homHI(F, G)$.
+
+\end{proof}
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{BBD}
+J. Bernstein, A. Beilinson and P. Deligne,
+Faisceaux pervers, {\em Asterisque} 100 (1982).
+
+\bibitem{Deg08b}
+F. D\'eglise, Motifs generiques.
+{\em Rendiconti Sem. Mat. Univ. Padova},
+119 (2008), 173 - 244.
+
+\bibitem{Deg10}
+F. D\'eglise, 
+Modules homotopiques.
+{\em Documenta Math.}
+16 (2011), 411 - 455
+
+\bibitem{HuKa}
+F. Huber, B. Kahn, The slice filtration and mixed Tate motives,
+Compositio Math. 142 (2006), 907 - 936.
+
+\bibitem{MVW}
+C. Mazza, V. Voevodsky, C. Weibel,
+{\em Lecture notes on motivic cohomology},
+Clay Mathematics Monographs vol. 2,
+AMS, 2006
+
+\bibitem{WH}
+C. Weibel,
+{\em An introduction to homological algebra},
+Cambridge Univ. Press, 1994.
+
+\end{thebibliography}
+
+\end{document}
+
+Does anything here even show up?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+%
+% * fixed \Ox 
+% * fixed "denote"
+% * obtained from rm:the:rm functors
+% * Clarified HuKa source
+% * add:assertion:add which we will make precise
+% * add:(D\'eglise):add See \ref{{*}} 1.13, and
+% * s/Certainly/Consequently/
+% * s/a descending/an ascending/
+% * provide reference for t-structure
+% * provide definition for \H^0
+% * provide definition for ihomHI and tHI
+% * add:and write F(n) for ...:add
+% * fix references
+% * prepare proofs for Corollary 1.5
+% * turn 1.4 into just a statement
+% * fix I the more
+% * Furth(s/re/er/)more
+% * combine Lemmas 1.8 and 1.9 
+% * fix consistency of notation for the nth slice
+% * label commutative diagram
+% * fix reference for Motifs Generiques
+% * fix reference for HuKa
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
