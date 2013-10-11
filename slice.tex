@@ -35,6 +35,9 @@
 \newtheorem{rmk}[equation]{Remark}
 \newtheorem{ex}[equation]{Example}
 
+% basic 
+\newcommand{\Z}{\mathbb{Z}}
+
 \newcommand{\Cat}[1]{\mathcal{#1}}
 
 \newcommand{\im}{\mathrm{im}}
@@ -62,8 +65,16 @@
 \newcommand{\htensor}{\otimes^H}
 \newcommand{\hhom}{\mathbf{hom}_H}
 
+% Derived Category of Motives
+\newcommand{\DMeff}{DM^{\mathrm{eff}}}
+\newcommand{\tensorDM}{\otimes^{L}_{tr}}
+\newcommand{\RHomDM}{\mathbf{RHom}_{\DMeff}}
+
+\newcommand{\slDM}[1]{s_{\leq #1}}
+
 \begin{document}
 \include{motives}
+\include{motives_slice}
 \include{homotopic_modules}
 \include{slice_filtration}
 \end{document}
