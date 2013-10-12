@@ -101,7 +101,35 @@ the following is also a triangle:
 \]
 \end{prop}
 
-\begin{prop}
+\begin{prop}\label{DMeff_slice_fund_invariant}
 For each $n$ and $M$, $\sDM{n}M = M'(n)[2n]$ for some $M' \in
 \DMeff$.
+\end{prop}
+
+\begin{definition}
+We call $M'$ in Prop. \ref{DMeff_slice_fund_invariant} the 
+\emph{$n$-th fundamental invariant of $M$}, represented by
+$\fIDM{n}M$.
+\end{definition}
+
+We now relate the slice filtration to the category of birational
+motives.
+
+\begin{definition}
+A motive $M \in \DMeff$ is \emph{birational} if for any $X \in 
+\SmK$, and $U$ a dense open subscheme,
+\[
+\hom_{\DMeff}(\suslC{U}, M) = \hom_{\DMeff}(\suslC{X}, M)
+\]
+for any $U'$. We write $\biMot$ for the full subcategory of
+birational motives.
+\end{definition}
+
+\begin{prop}
+$M \in \biMot$ if and only if $\hom_{\DMeff}(Z(1)[1], M) = 0$.
+\end{prop}
+
+\begin{prop}
+For each $M \in \DMeff$, $\fIDM{n}M \in \biMot$ for every $n$.
+In particular, $\slDM{0}\DMeff = \biMot$.
 \end{prop}
