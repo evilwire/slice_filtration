@@ -9,12 +9,13 @@ distinguished triangle
 \begin{equation}\label{slice_triangle_1}
 M_{-n}(n) \to M \to M' \to M_{-n}(n)[1],
 \end{equation}
-for each $n \geq 0$, and some $M'$. From the triangulated 
-5-lemma, the choice of $M'$ is unique up to isomorphism. Moreover:
+for each $n \geq 0$, and some $M'$. 
 
 \begin{prop}
-Fixing $n \geq 0$, the functor that sends $M$ to the $M'$ in the
-distinguished triangle in (\ref{slice_triangle_1}) is functorial.
+Fixing $n \geq 0$, the $M'$ in the distinguished triangle in
+(\ref{slice_triangle_1}) is defined up to unique isomorphism.
+
+In this case, associating $M$ with $M'$ is functorial.
 \end{prop}
 
 We write $\slDM{n}$ for this functor, and $\sgDM{n}$ for the
@@ -36,13 +37,22 @@ and
 \]
 \end{prop}
 
-Let $\DMeff(n)$ be the full subcategory of objects $M(n)$ where
-$M \in \DMeff$, and let $\DMeff_{n}$ be the full subcategory of
-$M \in \DMeff$ such that $M_{-n} = 0$
+Let $\DMeff(n)$ be the full subcategory of objects of the type 
+$M(n)$ where $M \in \DMeff$, and let $\DMeff_{n}$ be the full 
+subcategory of $M \in \DMeff$ such that $M_{-n} = 0$.
 
 \begin{prop}
 $\slDM{n}$ is right adjoint to the inclusion of $\DMeff(n)$ into 
-$\DMeff$.
+$\DMeff$. 
 \end{prop}
-   
 
+Let $\DMeff_{-n}$ be the full subcategory of objects for which
+$\slDM{n}(M) = 0$.
+
+\begin{prop}
+$\slDM{n}$ is left adjoint to the inclusion of $\DMeff_{-n}$ into 
+$\DMeff$. 
+\end{prop}
+
+Furthermore, we have two towers --- one ascending, one descending 
+--- of subcategories.
