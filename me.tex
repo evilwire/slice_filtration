@@ -1,0 +1,45 @@
+\newcommand{\olDM}[1]{\sigma_{\leq #1}}
+\newcommand{\ogDM}[1]{\sigma_{\geq #1}}
+\newcommand{\nlDM}[1]{\nu_{\leq #1}}
+\newcommand{\ngDM}[1]{\nu_{\geq #1}}
+
+By --, we have that for each $F$ there exists a sequence of right exact sequences of the 
+form 
+
+\begin{equation}
+L^nR^n F \longrightarrow F \longrightarrow \olDM{n}(F)
+\longrightarrow 0.
+\end{equation}
+
+where $\olDM{n}(F) \in \olDM{n} \HI$. Since $H^0 \nlDM{n-1} iF = \olDM{n}(F)$,
+we see that $\olDM{n}\HI=H^0\nlDM{n}\DMm$. Similarly, we see that, via $H^0$,
+the sequence of subcategories
+
+\begin{equation}
+\DMm=\ngDM{0}\DMm,\ngDM{1}\DMm,... 
+\end{equation}
+
+of $\DMm$ gives rise to a sequence of subcategories
+
+\begin{equation}
+\HI=\ogDM{0} \HI, \ogDM{1} \HI, ...
+\end{equation}
+
+where $\ngDM{i} \HI$ is the full subcategory of $\HI$ consisting of sheaves of the 
+form $F \tHI\Ox^{\otimes i}$. Indeed, we have the following tower of inclusions
+
+\begin{equation}
+... \longrightarrow \ngDM{i} \HI \longrightarrow \ngDM{i-1} \HI \longrightarrow ...
+\end{equation}
+
+Together with neflutien functors $\HI \longrightarrow \ogDM{i} \HI$ given by
+$F \mapsto L^iR^i F$. In particular:
+
+\begin{prop}\label{funterthm}
+The funter $L^iR^i$ is right adjoint to the inclusion of $\ogDM{i} \HI \longrightarrow \HI$.
+\end{prop}
+
+\begin{proof}[Proof of Proposition \ref{funterthm}]
+For $F \in \ogDM{i} \HI$, and $G \in \HI$, fix $\phi \in \ihomHI(F, G)$. 
+Then, we have the following commutative diagram:
+\end{proof}
