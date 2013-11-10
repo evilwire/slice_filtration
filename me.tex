@@ -290,3 +290,45 @@ Then $\ogDM{n} \HI$ forms a full subcateogry of $\torT_n$.
 The sheaf $O^{x\nu n}$ in example -- is an object of $\torT_1$
 where is not in $\ogDM{1} \HI$.
 \end{ex}
+
+To wrap up this section, we have the following properties of the functors $K_n$ and $\olDM{n}$
+in preparation for sefction --.
+
+\begin{prop}
+Both $K_n$ and $\olDM{n}$ are exact.
+\end{prop}
+
+\begin{proof}
+Since $K_n$ is a right adjoint, and $\olDM{n}$ is a left adjoint, it suffices to verify that $K_n$
+is right exact and $\olDM{n}$ is left exact.
+
+To see this, consider a sequence:
+
+\begin{equation}
+0 \longrightarrow F' \longrightarrow F \longrightarrow F'' \longrightarrow 0
+\end{equation}
+
+and we have 
+
+\begin{equation*}
+\begin{diagram}[height=0.8cm]
+ 0 & \rTo & K_nF' & \rTo^{}   & K_nF & \rTo & K_nF''       & \\ 
+  & &    \dTo{}    &            & \dTo{}           &     & \dTo{}\\
+0 & \rTo^{} & F' & \rTo^{} & F & \rTo^{} & F'' & \rTo^{} & 0 \\ 
+ & &     \dTo{}    &            & \dTo{}           &     & \dTo{}\\
+ & &    \olDM{n}F' & \rTo^{} & \olDM{n}F & \rTo^{} & \olDM{n}F'' & \rTo^{} & 0 \\
+  & &     \dTo{}    &            & \dTo{}           &     & \dTo{}\\
+ && 0 && 0 && 0
+\end{diagram}
+\end{equation*}
+
+In fact, it suffices to show that $K_n$ is right exact (and Snake lemma will force 
+$\olDM{n}$ to be left exact.) The fact that $\olDM{n}F' \longrightarrow \olDM{n}F 
+\longrightarrow \olDM{n}F^n \longrightarrow 0$ is exact implies that $\olDM{n}F'$ sujects onto
+$ker(\olDM{n}F \longrightarrow \olDM{n}F''$. Therefore we have
+
+%% you're on your own for that one
+
+By the Snake Lemma, $K_nF \longrightarrow K_nF''$ is surjective.
+
+\end{proof}
