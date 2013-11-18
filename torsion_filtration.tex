@@ -1,0 +1,334 @@
+\newcommand{\olDM}[1]{\sigma_{\leq #1}}
+\newcommand{\ogDM}[1]{\sigma_{\geq #1}}
+\newcommand{\nlDM}[1]{\nu_{\leq #1}}
+\newcommand{\ngDM}[1]{\nu_{\geq #1}}
+\newcommand{\ohomeHI}[0]{\underline{Hom}_{\sigma \geq i\HI}}
+\newcommand{\torT}[0]{\mathbb{T}}
+\newcommand{\torF}[0]{\mathbb{F}}
+\newcommand{\xlongrightarrow}[1]{\stackrel{#1}{\longrightarrow}}
+\newcommand{\homTorTn}[0]{\mathrm{Hom}_{\torT_n}}
+
+By --, we have that for each $F$ there exists a sequence of right exact sequences of the 
+form 
+
+\begin{equation}
+L^nR^n F \longrightarrow F \longrightarrow \olDM{n}(F)
+\longrightarrow 0.
+\end{equation}
+
+where $\olDM{n}(F) \in \olDM{n} \HI$. Since $H^0 \nlDM{n-1} iF = \olDM{n}(F)$,
+we see that $\olDM{n}\HI=H^0\nlDM{n}\DMm$. Similarly, we see that, via $H^0$,
+the sequence of subcategories
+
+\begin{equation}
+\DMm=\ngDM{0}\DMm,\ngDM{1}\DMm,... 
+\end{equation}
+
+of $\DMm$ gives rise to a sequence of subcategories
+
+\begin{equation}
+\HI=\ogDM{0} \HI, \ogDM{1} \HI, ...
+\end{equation}
+
+where $\ngDM{i} \HI$ is the full subcategory of $\HI$ consisting of sheaves of the 
+form $F \tHI\Ox^{\otimes i}$. Indeed, we have the following tower of inclusions
+
+\begin{equation}
+... \longrightarrow \ngDM{i} \HI \longrightarrow \ngDM{i-1} \HI \longrightarrow ...
+\end{equation}
+
+Together with neflutien functors $\HI \longrightarrow \ogDM{i} \HI$ given by
+$F \mapsto L^iR^i F$. In particular:
+
+\begin{prop}\label{funterthm}
+The funter $L^iR^i$ is right adjoint to the inclusion of $\ogDM{i} \HI \longrightarrow \HI$.
+\end{prop}
+
+\begin{proof}[Proof of Proposition \ref{funterthm}]
+
+For $F \in \ogDM{i} \HI$, and $G \in \HI$, fix $\phi \in \ihomHI(F, G)$. 
+Then, we have the following commutative diagram:
+
+\begin{equation*}
+\begin{diagram}[height=0.8cm]
+ L^iR^iF & \rTo^{L^iR^i\phi}   && L^iR^iG \\ 
+      \dTo{}    &&     & \dTo{}  \\
+F &&\rTo^{\phi} & G
+\end{diagram}
+\end{equation*}
+
+Note that counit map $L^iR^iF \longrightarrow F$ is an isomorphism. This allows us to define a map
+
+\begin{equation}
+r: \ihomeHI(F,G) \longrightarrow \ohomeHI(FL^iR^iG)
+\end{equation}
+
+given by $\phi \mapsto L^iR^i\phi \epsilon_F^{-1}$ if $L^iR^i\phi=0$, then $\phi\epsilon_F=\epsilon_GL^iR^i\phi=0$,
+but $\epsilon_G$ is an isomorphism. Thus, $r$ is injective.
+
+Fix $\psi : F \longrightarrow L^iR^iG$ and set $\phi = \epsilon_g \cdot \psi$. We claim that $r(\psi)=L^iR^i\phi\epsilon_F^{-1} = \psi$. We have the following:
+
+\begin{equation*}
+\begin{diagram}[height=0.8cm]
+ F & \rTo^{\psi}   && L^iR^iG \\ 
+      \dTo{\epsilon_F}    &&     & \dTo{\epsilon_{L^iR^iG}}  \\
+L^iR^iF &&\rTo^{L^iR^i\psi} & (L^iR^i)^2G
+\end{diagram}
+\end{equation*} 
+
+That is, $\psy \epsilon_F = \epsilon_{L^iR^iG} L^iR^i\psi$. Furthermore, we have that 
+$L^iR^i\phi\epsilon_F^{-1}=L^iR^i(\epsilon_G \cdot \psi)_{\epsilon_F}^{-1} = \epsilon_{L^iR^iG}L^iR^i\psi_{\epsilon_F}^{-1} = \psi\epsilon^F\cdot\epsilon_F^{-1}=\psi$
+as desired.
+\end{proof}
+
+As a consequence of the above, we have that
+
+\begin{cor}
+The sequence
+
+\begin{equation}
+\HI = \ogDM{0}\HI \longleftarrow \ogDM{1} \HI \longrightarrow \cdots
+\end{equation}
+
+is a filtration of $\HI$.
+\end{cor}
+
+However, $\HI$ does not admit a functional filtration by $\{\nu \geq_{i} \HI\}$, since the corefletion functors 
+$F \mapsto L^iR^iF$ are not generally injective, as demonstrated by the following example:
+
+\begin{ex}
+Let $(O^x)^n$ be the sheaf associated to the presheaf where sections of $X \in \delta m /\epsilon$ is the abelian subgroup of $O^x$ given by $\{x \in O^x | x=y^n$ for some $y \in O^x(X)\}$. It is clear that $(O^x)^n$ is a homotopy invariant sheaf with 
+transfers. Furthermore, there exists the following exact sequence
+
+\begin{equation}
+0 \longrightarrow \mu_n \longrightarrow O^x \longrightarrow O^{xn} \longrightarrow 0
+\end{equation}
+
+We note that $R(\mu_n) = 0$ (see MVW). Therefore, we have
+
+\begin{equation}
+0 \longrightarrow LRO^x \longrightarrow LRO^{xn} \longrightarrow 0
+\end{equation}
+
+In particular, $LRO^{xn} \simeq LRO^x \simeq O^x$, and the counit maps $LRO^{xn} \longrightarrowO^{xn}$
+is precisely $n$, wihch has a nontrivial kernel.
+
+The snag is that the size of $\ogDM{i} \HI$ is simply too small and doesn't include the kernals of the map
+
+\begin{equation}
+F \longrightarrow \olDM{n} F
+\end{equation}
+
+This can be resolved by enlarging the filtration at each level, and to do so, we turn to torsion theory of a well-powered abelian category.
+\end{ex}
+
+The goal is to construct a torsion theory ($\torT_n$,$\torF_n$) for each $n$, and show that there exists 
+a natural inclusion of full subcategories $\torT_i \longrightarrow \torT_{i-1}$ that fit together in the following tower
+
+\begin{equation}
+\cdots \longrightarrow \torT_i \longrightarrow \torT_{i-1} \longrightarrow \torT_{i-2} \longrightarrow
+\cdots \longrightarrow \torT_0 = \HI
+\end{equation}
+
+and that $\HI$ admits a functional filtration with respect to $\{\torT_i\}$.
+
+First, we construct the sequence of torsion theories.
+
+\begin{lem}
+The function $\olDM{n}$ is idempotent.
+\end{lem}
+
+\begin{proof}
+Fix $F \in \HI$. By --, $\olDM{n} F \in \olDM{n} \HI$,
+and by definition $R^{n+1} \olDM{n} F = 0$, and, thus,
+$L^{n+1}R^{n+1}F=0$. It follows that \olDM{n} F = \olDM{n}\olDM{n}F.
+\end{proof}
+
+\begin{lem}
+$\sigma_n(ker F \longrightarrow \olDM{n} F) = 0$.
+\end{lem}
+
+\begin{proof}
+Fix $F \in \HI$, let $F \longrightarrow \olDM{n}F$ be the canonical surjection,
+and let $K_n$ be the kernel. Then we have:
+
+\begin{equation*}
+\begin{diagram}[height=0.8cm]
+ & & L^{n+1}R^{n+1}K & \rTo^{}   & L^{n+1}R^{n+1}F & \rTo & 0       & \rTo & 0 \\ 
+ & &     \dTo{}    &            & \dTo{}           &     & \dTo{}\\
+0 & \rTo^{} & K_n & \rTo^{} & F & \rTo^{} & \olDM{n}F & \rTo^{} & 0 \\ 
+ & &     \dTo{}    &            & \dTo{}           &     & \dTo{}\\
+ & &    \olDM{n} K_n & \rTo^{} & \olDM{n}F & \rTo^{} & \olDM{n}^2F & \rTo^{} & 0 \\
+\end{diagram}
+\end{equation*}
+
+By the Snake Lemma, we have the exact sequence
+
+\begin{equation}
+0 \longrightarrow \olDM{n}K_n \longrightarrow \olDM{n} F \longrightarrow \olDM{n}^2 F \longrightarrow 0
+\end{equation}
+\end{proof}
+
+\begin{prop}
+For each $n$, $\olDM{n}$ is a coradical.
+\end{prop}
+
+\begin{proof}
+$\olDM{n}$ is a right exact quotient functor by --. -- shows that $\olDM{n}$ is idempotent, and -- 
+shows that $\olDM{n} (lar F \longrightarrow \olDM{n}F) = 0$ for each $F$.
+\end{proof}
+
+\begin{cor}
+For each $n$, there exists a hereditary torsion theory $(\torT_n, \torF_n)$.
+\end{cor}
+
+\begin{proof}
+This is a direct consequence of Prop -- and Theorem --.
+\end{proof}
+
+Let us give a more explicit description of the torsion theories $(\torT_n, \torF_n)$.
+Following the construction, we have
+
+\begin{align*}\label{f0}
+F \in \torT_n \textrm{ if and only if } \olDM{n} F = 0. \\
+F \in \torF_n \textrm{ if and only if } \olDM{n} F = F.
+\end{align*}
+
+Tying this together with the filtration we have introduced earlier, we have
+
+\begin{prop}
+$\torF_n = \olDM{n} \HI$, and $\torT_n = \{F \in \HI | L^nR^nF \longrightarrow F$ is a surjection $\}$.
+\end{prop}
+
+\begin{proof}
+If $\olDM{n}F = F$. Then $R^{n+1}F=R^{n+1}\olDM{n}F=0$. Therefore $F \in \olDM{n} \HI$. Conversely, fix
+$F \in \olDM{n} \HI$, we have
+
+\begin{equation}
+0 = L^{n+1}R^{n+1}F \longrightarrow F \longrightarrow \olDM{n}F \longrightarrow 0.
+\end{equation}
+
+It follows that $F= \olDM{n}F$.
+
+That $L^{n+1}R^{n+1}F \longrightarrow F$ is a surjection iff and only if $\olDM{n}F = 0$. The second statement
+follows.
+\end{proof}
+
+Since $L^nR^n(L^{n+k}R^{n+k}F) \longrightarrow^{\sim} L^{n+k}R^{n+k} F$ is an isomorphism for all $k > 0$
+(in particular a surjection), we have that $\torT_{n+k} \subset \torT{n}$. Furthermore, for $F \in \HI$, for
+$F \longrightarrow \olDM{n} F$, complete to an exact sequence:
+
+\begin{equation}
+0 \longrightarrow K_n \xlongrightarrow{iF} F \xlongrightarrow{S_I} \olDM{n}F \longrightarrow 0
+\end{equation}
+
+We claim that sending $F$ to $K_n$ defines a functor $\HI \longrightarrow \torT_n$. Indeed, fix 
+$F \xlongrightarrow{\phi} G$, and we have
+
+\begin{equation*}
+\begin{diagram}[height=0.8cm]
+0 & \rTo^{}   & K_n & \rTo^{i_F} & F       & \rTo & \olDM{n} F & \rTo & 0 \\ 
+     \dTo{}    &            & \dTo{\phi}           &     & \dTo{}\\
+0 & \rTo^{} & K_n & \rTo^{} & G & \rTo_{S_g} & \olDM{n}G & \rTo & 0 \\ 
+\end{diagram}
+\end{equation*}
+ and since $S_g\phi i _F = 0$, we have a map $K_n\longrightarrow K_n'$.
+ It is straightforward to verify that this association preserves composition. Let $K_n$ denote this functor.
+ 
+\begin{lem}
+$K_n$ is idempotent. In particular, $K_n|_{\torT_n}$ is the identity.
+\end{lem}
+
+\begin{proof}
+Since $\olDM{n-1}K_n(F)=0$, we have
+
+\begin{equation}
+0 \longrightarrow K_n^2(F) \longrightarrow K_n(F) \longrightarrow \olDM{n-1} K_n F = 0.
+\end{equation}
+\end{proof}
+
+\begin{lem}
+$K_n$ is right adjoint to inclusion $\torT_n\longrightarrow\HI$.
+\end{lem}
+
+\begin{proof}
+Fix $F \in \TorT_n$ and $G \in \HI$. Then we have for each $\phi:F\longrightarrow G$.
+
+\begin{equation*}
+\begin{diagram}[height=0.8cm]
+ K_nF & \rTo^{K_n\phi}   && K_nG \\ 
+      \dTo{}    &&     & \dTo{i_g}  \\
+F &&\rTo^{\phi} & G
+\end{diagram}
+\end{equation*}
+
+and definte $r: \homHI(F,G) \longrightarrow \homTorTn(K_nF,G)$ by $\phi \in \homHI(F,G) \mapsto K_n\phi$,
+with inverse given by $\psi \in \homTorTn(F,G) \mapsto i_g\psi$.
+\end{proof}
+
+\begin{thm}
+The tower
+\begin{equation}
+\cdots \longrightarrow \torT_i \longrightarrow \torT_{i-1} \longrightarrow \cdots \longrightarrow \torT_0 = \HI
+\end{equation}
+is a filtration of $\HI$, which equips $\HI$ with an associated functorial filtration by $\left\{ \torT_i \right\}$.
+\end{thm}
+
+\begin{ex}
+For $F \in \ogDM{n} \HI$, $F=l^{i+1}R^{i+1}F'$ for some $F' \in \HI$.
+Therefore 
+\begin{align*}
+L^{i+1}F^{i+1}F &= L^{i+1}R^{i+1}L^{i+1}R^{i+1}F' \\
+&= L^{i+1}R^{i+1}F' \\
+&= F
+\end{align*}
+
+Then $\ogDM{n} \HI$ forms a full subcateogry of $\torT_n$.
+\end{ex}
+
+\begin{ex}
+The sheaf $O^{x\nu n}$ in example -- is an object of $\torT_1$
+where is not in $\ogDM{1} \HI$.
+\end{ex}
+
+To wrap up this section, we have the following properties of the functors $K_n$ and $\olDM{n}$
+in preparation for sefction --.
+
+\begin{prop}
+Both $K_n$ and $\olDM{n}$ are exact.
+\end{prop}
+
+\begin{proof}
+Since $K_n$ is a right adjoint, and $\olDM{n}$ is a left adjoint, it suffices to verify that $K_n$
+is right exact and $\olDM{n}$ is left exact.
+
+To see this, consider a sequence:
+
+\begin{equation}
+0 \longrightarrow F' \longrightarrow F \longrightarrow F'' \longrightarrow 0
+\end{equation}
+
+and we have 
+
+\begin{equation*}
+\begin{diagram}[height=0.8cm]
+ 0 & \rTo & K_nF' & \rTo^{}   & K_nF & \rTo & K_nF''       & \\ 
+  & &    \dTo{}    &            & \dTo{}           &     & \dTo{}\\
+0 & \rTo^{} & F' & \rTo^{} & F & \rTo^{} & F'' & \rTo^{} & 0 \\ 
+ & &     \dTo{}    &            & \dTo{}           &     & \dTo{}\\
+ & &    \olDM{n}F' & \rTo^{} & \olDM{n}F & \rTo^{} & \olDM{n}F'' & \rTo^{} & 0 \\
+  & &     \dTo{}    &            & \dTo{}           &     & \dTo{}\\
+ && 0 && 0 && 0
+\end{diagram}
+\end{equation*}
+
+In fact, it suffices to show that $K_n$ is right exact (and Snake lemma will force 
+$\olDM{n}$ to be left exact.) The fact that $\olDM{n}F' \longrightarrow \olDM{n}F 
+\longrightarrow \olDM{n}F^n \longrightarrow 0$ is exact implies that $\olDM{n}F'$ sujects onto
+$ker(\olDM{n}F \longrightarrow \olDM{n}F''$. Therefore we have
+
+%% you're on your own for that one
+
+By the Snake Lemma, $K_nF \longrightarrow K_nF''$ is surjective.
+
+\end{proof}
