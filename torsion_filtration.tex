@@ -8,6 +8,8 @@
 \newcommand{\xlongrightarrow}[1]{\stackrel{#1}{\longrightarrow}}
 \newcommand{\homTorTn}[0]{\mathrm{Hom}_{\torT_n}}
 
+\section{Filtration On $\HI$}
+
 By --, we have that for each $F$ there exists a sequence of right 
 exact sequences of the form 
 
@@ -39,15 +41,15 @@ the following tower of inclusions
 \longrightarrow \cdots
 \end{equation}
 
-Together with neflutien functors $\HI \longrightarrow \ogDM{i} 
+Together with refletion functors $\HI \longrightarrow \ogDM{i} 
 \HI$ given by $F \mapsto L^iR^i F$. In particular:
 
-\begin{prop}\label{funterthm}
-The funter $L^iR^i$ is right adjoint to the inclusion of $\ogDM{i} 
+\begin{prop}\label{functer_prop}
+The functor $L^iR^i$ is right adjoint to the inclusion of $\ogDM{i} 
 \HI \longrightarrow \HI$.
 \end{prop}
 
-\begin{proof}[Proof of Proposition \ref{funterthm}]
+\begin{proof}[Proof of Proposition \ref{functer_prop}]
 
 For $F \in \ogDM{i} \HI$, and $G \in \HI$, fix $\phi \in 
 \ihomHI(F, G)$. Then, we have the following commutative diagram:
@@ -109,10 +111,10 @@ L^iR^iF$ are not generally injective, as demonstrated by the
 following example: 
 
 \begin{ex}
-Let $(O^x)^n$ be the sheaf associated to the presheaf where 
+Let $(\Ox)^n$ be the sheaf associated to the presheaf where 
 sections of $X \in \delta m /\epsilon$ is the abelian subgroup of 
-$O^x$ given by $\{x \in O^x | x=y^n$ for some $y \in O^x(X)\}$. 
-It is clear that $(O^x)^n$ is a homotopy invariant sheaf with 
+$\Ox$ given by $\{x \in \Ox | x=y^n$ for some $y \in \Ox(X)\}$. 
+It is clear that $(\Ox)^n$ is a homotopy invariant sheaf with 
 transfers. Furthermore, there exists the following exact sequence 
 
 \begin{equation}
@@ -245,7 +247,7 @@ That $L^{n+1}R^{n+1}F \longrightarrow F$ is a surjection iff and
 only if $\olDM{n}F = 0$. The second statement follows.
 \end{proof}
 
-Since $L^nR^n(L^{n+k}R^{n+k}F) \longrightarrow^{\sim} 
+Since $L^nR^n(L^{n+k}R^{n+k}F) \stackrel{\sim}{\longrightarrow}
 L^{n+k}R^{n+k} F$ is an isomorphism for all $k > 0$ (in particular 
 a surjection), we have that $\torT_{n+k} \subset \torT{n}$. 
 Furthermore, for $F \in \HI$, for $F \longrightarrow \olDM{n} F$, 
@@ -318,7 +320,7 @@ functorial filtration by $\left\{ \torT_i \right\}$.
 \end{thm}
 
 \begin{ex}
-For $F \in \ogDM{n} \HI$, $F=l^{i+1}R^{i+1}F'$ for some $F' \in 
+For $F \in \ogDM{n} \HI$, $F=L^{i+1}R^{i+1}F'$ for some $F' \in 
 \HI$. Therefore 
 \begin{align*}
 L^{i+1}F^{i+1}F &= L^{i+1}R^{i+1}L^{i+1}R^{i+1}F' \\
@@ -330,8 +332,8 @@ Then $\ogDM{n} \HI$ forms a full subcateogry of $\torT_n$.
 \end{ex}
 
 \begin{ex}
-The sheaf $O^{x\nu n}$ in example -- is an object of $\torT_1$
-where is not in $\ogDM{1} \HI$.
+The sheaf $(\Ox)^n$ in example -- is an object of $\torT_1$
+but is not an object of $\ogDM{1} \HI$.
 \end{ex}
 
 To wrap up this section, we have the following properties of the 
