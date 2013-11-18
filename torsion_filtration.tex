@@ -31,7 +31,7 @@ of $\DMm$ gives rise to a sequence of subcategories
 \end{equation}
 
 where $\ngDM{i} \HI$ is the full subcategory of $\HI$ consisting 
-of sheaves of the form $F \tHI\Ox^{\otimes i}$. Indeed, we have 
+of sheaves of the form $F \tHI (\Ox)^{\otimes i}$. Indeed, we have 
 the following tower of inclusions
 
 \begin{equation}
@@ -64,7 +64,7 @@ Note that counit map $L^iR^iF \longrightarrow F$ is an
 isomorphism. This allows us to define a map
 
 \begin{equation}
-r: \ihomeHI(F,G) \longrightarrow \ohomeHI(FL^iR^iG)
+r: \ihomHI(F,G) \longrightarrow \ohomeHI(FL^iR^iG)
 \end{equation}
 
 given by $\phi \mapsto L^iR^i\phi \epsilon_F^{-1}$ if 
@@ -83,7 +83,7 @@ L^iR^iF &&\rTo^{L^iR^i\psi} & (L^iR^i)^2G
 \end{diagram}
 \end{equation*} 
 
-That is, $\psy \epsilon_F = \epsilon_{L^iR^iG} L^iR^i\psi$. 
+That is, $\psi \epsilon_F = \epsilon_{L^iR^iG} L^iR^i\psi$. 
 Furthermore, we have that $L^iR^i\phi\epsilon_F^{-1} = 
 L^iR^i(\epsilon_G \cdot \psi)_{\epsilon_F}^{-1} = 
 \epsilon_{L^i R^iG}L^i R^i \psi_{\epsilon_F}^{-1} = 
@@ -123,11 +123,11 @@ transfers. Furthermore, there exists the following exact sequence
 We note that $R(\mu_n) = 0$ (see MVW). Therefore, we have
 
 \begin{equation}
-0 \longrightarrow LRO^x \longrightarrow LRO^{xn} \longrightarrow 0
+0 \longrightarrow LRO^x \longrightarrow LR(\Ox)^{n} \longrightarrow 0
 \end{equation}
 
-In particular, $LRO^{xn} \simeq LRO^x \simeq O^x$, and the counit 
-maps $LRO^{xn} \longrightarrowO^{xn}$ is precisely $n$, wihch has 
+In particular, $LR(\Ox)^{n} \simeq LR(\Ox) \simeq \Ox$, and the counit 
+maps $LRO^{xn} \longrightarrow (\Ox)^n$ is precisely $n$, wihch has 
 a nontrivial kernel.
 
 The snag is that the size of $\ogDM{i} \HI$ is simply too small 
@@ -165,7 +165,8 @@ The function $\olDM{n}$ is idempotent.
 \begin{proof}
 Fix $F \in \HI$. By --, $\olDM{n} F \in \olDM{n} \HI$,
 and by definition $R^{n+1} \olDM{n} F = 0$, and, thus,
-$L^{n+1}R^{n+1}F=0$. It follows that \olDM{n} F = \olDM{n}\olDM{n}F.
+$L^{n+1}R^{n+1}F=0$. It follows that $\olDM{n} F = 
+\olDM{n}\olDM{n}F$.
 \end{proof}
 
 \begin{lem}
@@ -288,8 +289,8 @@ $K_n$ is right adjoint to inclusion $\torT_n\longrightarrow\HI$.
 \end{lem}
 
 \begin{proof}
-Fix $F \in \TorT_n$ and $G \in \HI$. Then we have for each 
-$\phi:F \longrightarrow G$.
+Fix $F \in \torT_n$ and $G \in \HI$. Then we have for each 
+$\phi: F \longrightarrow G$.
 
 \begin{equation*}
 \begin{diagram}[height=0.8cm]
