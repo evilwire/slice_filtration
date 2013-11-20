@@ -146,9 +146,13 @@ by
 \ptres{x}{y} = 
 \begin{cases}
 0 & y \notin \subsch{1}{Z} \\
-\sum_{z|y} 
+\sum_{z|y} \phi_{\resf{z},\resf{x}}^* \comp \res{z} & \textrm{otherwise}
 \end{cases}
 \]
+In case $\ptres{x}{y}$ is nonzero, the sum is taken over all $z$
+lying over $y \in \subsch{1}{Z}$, and
+$\phi_{\resf{z},\resf{y}}^*$ is the corestriction map associated to 
+the finite field extension $\resf{y} \to \resf{z}$.
 
 \begin{definition}
 A cycle module $M$ on $\fields(B)$ is a cycle premodule which
