@@ -69,6 +69,7 @@
 
 % category of schemes
 \newcommand{\SmK}{Sm_k}
+\newcommand{\spec}{\mathrm{Spec}\;}
 
 % Derived Category of Motives
 \newcommand{\suslC}{C_*\Z_{\mathrm{tr}}}
@@ -82,11 +83,24 @@
 \newcommand{\sDM}[1]{s_{#1}}
 \newcommand{\fIDM}[1]{c_{#1}}
 
+% general maps
+\renewcommand{\phi}{\varphi}
+
+% cycle premodules
+\newcommand{\fields}{\mathcal{K}}
+\newcommand{\res}[1]{\partial_{#1}}
+\renewcommand{\special}[2]{s_{#1}^{#2}}
+\newcommand{\idprime}[1]{\mathfrak{#1}}
+
+% display math
+\newcommand{\dm}{\displaymath}
+
 \begin{document}
 \include{motives}
 \include{motives_slice}
 \include{homotopic_modules}
 \include{slice_filtration}
 \include{torsion_filtration}
+\include{cycmod_filtration}
 \include{biblio}
 \end{document}
