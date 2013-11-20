@@ -127,7 +127,7 @@ $\{a\} \cdot \omega_F(\rho) = -\omega_F(\{a\} \cdot \rho)$)
 $\milK_*$ is a cycle premodule.
 \end{ex}
 
-For $X$ a $k$-scheme, let $\codim{1}{X}$ denote the collection of 
+For $X$ a $k$-scheme, let $\subsch{1}{X}$ denote the collection of 
 codimension 1 subscheme. Write $\xi_X$ be the generic point of an
 irreducible $X$ with $K_X = \O_X,\xi_X$. If $X$ is normal, then 
 for $x \in \codim{1}{X}$, the local ring $\O_X,x$ is a valuation 
@@ -135,7 +135,9 @@ ring of $K_X$ with residue field $\resf{x}$. Write $M(x)$ for
 $M(\resf{x})$, and $\res{x}: M(\xi_X) \to M(x)$ for the 
 restriction map.
 
-Furthermore, for $x, y \in X$, define
+Furthermore, for $x, y \in X$, let $Z$ be the closed subscheme 
+determined by $x$, and $\overline{Z}$ be the normalization $Z$.
+Define
 \[
 \ptres{x}{y}: M(x) \to M(y)
 \]
@@ -143,8 +145,7 @@ by
 \[
 \ptres{x}{y} = 
 \begin{cases}
-0 & y\textbf{ is not a codim one subscheme in the closed 
-    subscheme defined by }x \\
+0 & y \notin \subsch{1}{Z} \\
 \sum_{z|y} 
 \end{cases}
 \]
@@ -157,8 +158,8 @@ satisfies the following conditions:
 \item[\textbf{(FD)}] \itemhead{Finite support of divisors.} 
 $X$ be a normal scheme and $\rho \in M(\xi_X)$. Then $\res{x}: 
 M(\xi_X) \to M(X)$ is 0 for all but finitely many $x \in 
-\codim{1}{X}$, where
+\subsch{1}{X}$.
 
-\item[\textbf{(C)}]
+\item[\textbf{(C)}] \itemhead{Closedness.} Let
 \end{enumerate}
 \end{definition}
