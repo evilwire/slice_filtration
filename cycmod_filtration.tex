@@ -55,16 +55,16 @@ $\psi_{\idprime{p}}: E \to R/{\idprime{p}}$ be natural maps.
 \milK_*E$, $\rho \in M(F)$, and $\mu \in M(E)$, then:
 
 \item[\textbf{R2a.}] $\phi_*(x \cdot \rho) = \phi_*(x) \cdot 
-\phi_*(\rho)$
+\phi_*(\rho)$.
 
 \item[\textbf{R2b.}] if $\phi$ is finite, $\phi^*(\phi_*(x) \cdot 
-\mu) = x \cdot \phi^*(\mu)$
+\mu) = x \cdot \phi^*(\mu)$.
 
 \item[\textbf{R2c.}] if $\phi$ is finite, $\phi^*(y \cdot 
-\phi_*(\rho)) = \phi^*(y) \cdot \rho$
+\phi_*(\rho)) = \phi^*(y) \cdot \rho$.
 
-\item[\textbf{R3.}] For $\phi: F \to E$ and $v$ a valuation on $E$
-and $w$ and a valuation on $F$.
+\item[\textbf{R3.}] For $\phi: F \to E$, $v$ a valuation on $E$
+and $w$ and a valuation on $F$:
 
 \item[\textbf{R3a.}] Suppose $w$ is a nontrivial restriction of 
 $v$ with ramification index $e$. Let $\phib: \resf{w} \to 
@@ -101,3 +101,24 @@ one has
 \end{enumerate}
 \end{definition}
 
+\begin{definition}
+A homomorphism $\omega: M \to M'$ of cycle premodules over 
+$\fields(B)$ of even (resp. odd) type is given by homomorphisms:
+\[
+\omega_F: M(F) \to M'(F)
+\]
+such that for each $\phi: F \to E$
+\begin{enumerate}
+\item $\phi_* \comp \omega_F = \omega_E \comp \phi_*$
+
+\item $\phi^* \comp \omega_E = \omega_F \comp \phi^*$
+
+\item for $\{a\} \in \milK_*F$ and $\rho \in M(F)$, $\{a\} \cdot 
+\omega_F(\rho) = \omega_F(\{a\} \cdot \rho)$ (resp. 
+$\{a\} \cdot \omega_F(\rho) = -\omega_F(\{a\} \cdot \rho)$)
+
+\item $\res{v} \comp \omega_F = \omega_{\resf{v}} \comp \res{v}$
+(resp. $\res{v} \comp \omega_F = -\omega_{\resf{v}} \comp 
+\res{v}$).
+\end{enumerate}
+\end{definition}
