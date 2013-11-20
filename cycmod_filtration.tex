@@ -7,8 +7,8 @@ be the class of fields $F$ finitely generated over $k$ such that
 $\spec F$ is a $B$-scheme.
 
 \begin{definition}
-A \emph{cycle premodule} on $\fields{B}$ is an object function
-that associated to each $F \in \fields{B}$ a $\Z$-graded abelian
+A \emph{cycle premodule} on $\fields(B)$ is an object function
+that associated to each $F \in \fields(B)$ a $\Z$-graded abelian
 group $M(F) = \prod_i M_i(K)$ with the following data:
 
 \begin{enumerate}
@@ -120,5 +120,45 @@ $\{a\} \cdot \omega_F(\rho) = -\omega_F(\{a\} \cdot \rho)$)
 \item $\res{v} \comp \omega_F = \omega_{\resf{v}} \comp \res{v}$
 (resp. $\res{v} \comp \omega_F = -\omega_{\resf{v}} \comp 
 \res{v}$).
+\end{enumerate}
+\end{definition}
+
+\begin{ex}
+$\milK_*$ is a cycle premodule.
+\end{ex}
+
+For $X$ a $k$-scheme, let $\codim{1}{X}$ denote the collection of 
+codimension 1 subscheme. Write $\xi_X$ be the generic point of an
+irreducible $X$ with $K_X = \O_X,\xi_X$. If $X$ is normal, then 
+for $x \in \codim{1}{X}$, the local ring $\O_X,x$ is a valuation 
+ring of $K_X$ with residue field $\resf{x}$. Write $M(x)$ for 
+$M(\resf{x})$, and $\res{x}: M(\xi_X) \to M(x)$ for the 
+restriction map.
+
+Furthermore, for $x, y \in X$, define
+\[
+\ptres{x}{y}: M(x) \to M(y)
+\]
+by
+\[
+\ptres{x}{y} = 
+\begin{cases}
+0 & y\textbf{ is not a codim one subscheme in the closed 
+    subscheme defined by }x \\
+\sum_{z|y} 
+\end{cases}
+\]
+
+\begin{definition}
+A cycle module $M$ on $\fields(B)$ is a cycle premodule which
+satisfies the following conditions:
+
+\begin{enumerate}
+\item[\textbf{(FD)}] \itemhead{Finite support of divisors.} 
+$X$ be a normal scheme and $\rho \in M(\xi_X)$. Then $\res{x}: 
+M(\xi_X) \to M(X)$ is 0 for all but finitely many $x \in 
+\codim{1}{X}$, where
+
+\item[\textbf{(C)}]
 \end{enumerate}
 \end{definition}
