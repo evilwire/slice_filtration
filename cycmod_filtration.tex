@@ -1,0 +1,48 @@
+\section{Filtration on Cycle Modules}
+
+Let us recall definition and results of cycle modules, first
+defined in \cite{Ro96}. In the following, let $S$ be a separated 
+scheme of finite type over any base field $k$. Let $\fields(B)$ 
+be the class of fields $F$ finitely generated over $k$ such that
+$\spec F$ is a $B$-scheme.
+
+\begin{definition}
+A \emph{cycle premodule} on $\fields{B}$ is an object function
+that associated to each $F \in \fields{B}$ a $\Z$-graded abelian
+group $M(F) = \prod_i M_i(K)$ with the following data:
+
+\begin{enumerate}
+\item[\textbf{D1.}] For each $\phi: F \to E$, there is a degree 0
+map $\phi_*: M(F) \to M(E)$ called the \emph{restriction map 
+associated to $\phi$}
+
+\item[\textbf{D2.}] For each finite $\phi: F \to E$, there is a 
+degree 0 map $\phi^*: M(E) \to M(F)$ called the \emph{corestriction
+map associated to $\phi$}
+
+\item[\textbf{D3.}] For each $F$, the group $M(F)$ is equipped
+with a left $K^M_*(F)$-module, where $K^M_*(F)$ is the Milnor
+$K$-ring of $F$.
+
+\item[\textbf{D4.}] For any valuation $v$ of $F$, there exists 
+maps $\res{v}: M(F) \to M(\kappa(v))$ and $\special{v}{\idprime{p}}$
+called the \emph{residue} and \emph{specialization} respectively, 
+where $\kappa(v)$ is the residue field of $v$ and $\idprime{p}$ is 
+a prime of $v$,
+\end{enumerate}
+
+subject to the following conditions:
+
+\begin{enumerate}
+\item[\textbf{R1a.}] For each $\phi: F \to E$ and $\psi: E \to L$,
+$(\psi \comp \phi)_* = \psi_* \comp \phi_*$
+
+\item[\textbf{R1b.}] For each finite $\phi: F \to E$ and $\psi: E
+\to L$, $(\psi \comp \phi)^* = \phi^* \comp \psi^*$
+
+\item[\textbf{R1c.}] For $\phi: F \to E$ and $\psi: E \to L$ with
+$\phi$ finite, define $R = E \otimes_F L$, and let $\idprime{p}$
+be any prime ideal of $R$.
+\end{enumerate}
+\end{definition}
+
