@@ -182,19 +182,26 @@ we represent by $\HI_*$.
 \begin{definition}
 A \emph{homotopic module} $F_*$ is a $\Z$-graded homotopy 
 invariant sheaf with transfers such that for every $n$, there
-exists a map (called \emph{suspension}) $LF_n \to F_{n+1}$
+exists a map (called \emph{suspension}) $\susp_n: LF_n \to F_{n+1}$
 such that the corresponding adjunction map $F_n \to RF_{n+1}$
 is an isomorphism.
 
-A map between homotopic modules $F_*$ and $G_*$ is a homomorphism $\phi$
-of graded homotopy invariant sheaves with transfers that respects
-the suspension maps, i.e. the following diagram is commutative for
-each $n$:
+A map between homotopic modules $F_*$ and $G_*$ is a homomorphism 
+of graded homotopy invariant sheaves with transfers $\phi_*$ that 
+respects the suspension maps, i.e. the following diagram is 
+commutative for each $n$:
 \[
 \begin{diagram}
-LF_n          & \rTo & F_{n + 1}          \\
-\dTo{L\phi_n} &      & \dTo{\phi_{n + 1}} \\
-LG_m          & \rTo & G_{m + 1}
+LF_n          & \rTo{\susp_n}  & F_{n + 1}          \\
+\dTo{L\phi_n} &                & \dTo_{\phi_{n + 1}} \\
+LG_m          & \rTo{\susp'_n} & G_{m + 1}
 \end{diagram}
 \]
 \end{definition}
+
+As remarked in --, there exists adjoint functors
+\[
+\sptHI: \HI \leftrightarrows \HI_* : \loopHI
+\]
+in which $\sptHI$ is fully faithful, and $\loopHI$ is exact.
+
