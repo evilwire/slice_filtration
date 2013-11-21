@@ -4,7 +4,7 @@ Let us recall definition and results of cycle modules, first
 defined in \cite{Ro96}. In the following, let $S$ be a separated 
 scheme of finite type over any base field $k$. Let $\fields(B)$ 
 be the class of fields $F$ finitely generated over $k$ such that
-$\spec F$ is a $B$-scheme.
+$\spec F$ emits a map to $B$.
 
 \begin{definition}
 A \emph{cycle premodule} on $\fields(B)$ is an object function
@@ -172,4 +172,29 @@ from $M(\xi_X)$ to $M(x_0)$ given by
 \]
 is 0.
 \end{enumerate}
+\end{definition}
+
+Let $\Cat{MCyc}$ denote the category of cycle modules. In ---,
+D\'eglise demonstrated that $\Cat{MCyc}$ is categorically 
+equivalent to the category of homotopic modules (see -- ), which
+we represent by $\HI_*$. 
+
+\begin{definition}
+A \emph{homotopic module} $F_*$ is a $\Z$-graded homotopy 
+invariant sheaf with transfers such that for every $n$, there
+exists a map (called \emph{suspension}) $LF_n \to F_{n+1}$
+such that the corresponding adjunction map $F_n \to RF_{n+1}$
+is an isomorphism.
+
+A map between homotopic modules $F_*$ and $G_*$ is a homomorphism $\phi$
+of graded homotopy invariant sheaves with transfers that respects
+the suspension maps, i.e. the following diagram is commutative for
+each $n$:
+\[
+\begin{diagram}
+LF_n          & \rTo & F_{n + 1}          \\
+\dTo{L\phi_n} &      & \dTo{\phi_{n + 1}} \\
+LG_m          & \rTo & G_{m + 1}
+\end{diagram}
+\]
 \end{definition}
