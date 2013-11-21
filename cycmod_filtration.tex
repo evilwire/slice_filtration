@@ -229,7 +229,7 @@ Recall $\slHI{n}$ is the coradical associated to the counit
 $L^{n + 1}R^{n + 1} \to id$. That is, for $F \in \HI$, $\slHI{n}F$
 is the cokernel of $L^{n + 1}R^{n + 1}F \to F$.
 
-\begin{lem}
+\begin{lem}\label{R_commute_with_slHI}
 For each $n \geq 0$, $R \slHI{n}$ is naturally isomorphic to 
 $\slHI{n - 1}R$.
 \end{lem}
@@ -258,3 +258,21 @@ L^nR^n(RF)           & \rTo & RF       & \rTo & \slHI{n - 1} RF & \rTo & 0
 \end{diagram}
 Forcing $R\slHI{n}F \to \slHI{n - 1} RF$ to be an isomorphism.
 \end{proof}
+
+Fix $F_* \in \HI_*$ and $n \in \Z$, and let $\slMH{n}F_*$ 
+represent the graded homotopy invariant sheaf with transfers 
+whose $j$-th grading is given by
+\[
+(\slMH{n}F_*)_j = 
+\begin{cases}
+0                 & \textrm{if } j + n \leq 0 \\
+\slHI_{n + j} F_j & \textrm{otherwise}
+\end{cases}
+\]
+By Lemma \ref{R_commute_with_slHI}, we see that for $F_* \in 
+\HI_*$, $\slMH{n}F_* \in \HI_*$. Functoriality is straightforward.
+Furthermore, notice that for each $F_* \in \HI_*$, there exists a 
+natural surjection (of total degree 0) $F_* \to \slHM{n} F_*$.
+
+In particular,
+
