@@ -234,4 +234,27 @@ For each $n \geq 0$, $R \slHI{n}$ is naturally isomorphic to
 $\slHI{n - 1}R$.
 \end{lem}
 \begin{proof}
+Fix $F \in \HI$ and apply the exact functor $R$ to
+\[
+L^{n + 1}R^{n + 1} F \to F \to \slHI{n}F \to 0
+\]
+from which we obtain
+\begin{equation}\label{R_counit_seq}
+RL^{n + 1}R^{n + 1} \to RF \to R \slHI{n} F \to 0.
+\end{equation}
+But $RL^{n + 1}R^{n + 1}F \stackrel{\sim}{\to} L^nR^{n + 1} F$ is
+an isomorphism and the map 
+\[
+L^nR^{n + 1}F \to RF
+\] 
+is the counit of $L^nR^n(RF) \to RF$.
+
+Fitting (\ref{R_counit_seq}) with $L^nR^n(RF) \to RF \to \slHI{n 
+- 1} \to 0$, we have
+\begin{diagram}
+L^{n + 1}R^{n + 1} F & \rTo & RF       & \rTo & R\slHI{n}F      & \rTo & 0 \\
+\dTo{\sim}           &      & \dEquals &      & \dTo            \\
+L^nR^n(RF)           & \rTo & RF       & \rTo & \slHI{n - 1} RF & \rTo & 0
+\end{diagram}
+Forcing $R\slHI{n}F \to \slHI{n - 1} RF$ to be an isomorphism.
 \end{proof}
