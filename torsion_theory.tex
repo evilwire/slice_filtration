@@ -18,4 +18,29 @@ X            & \rTo & Y
 $\tau_X$ and $\tau_Y$ are injections 
 \end{definition}
 
+\begin{definition}
+The concept of a quotient functor is dual to that of a suboject
+functor. That is, $F: \Cat{A} \to \Cat{A}$ is a \emph{quotient
+functor} if there exists a natural transformation $\tau$ from $F$ 
+to the identity such that for each $X \to Y$, we have
+\[
+\begin{diagram}
+X            & \rTo & Y            \\
+\dTo{\tau_X} &      & \dTo{\tau_Y} \\
+FX           & \rTo & FY
+\end{diagram}
+\]
+and $\tau_X$ and $\tau_Y$ are surjections.
+\end{definition}
+
+\begin{definition}
+We say that $F$ is \emph{idempotent} if $FF = F$.
+\end{definition}
+
+\begin{definition}
+We say that a subobject functor $F$ is a \emph{pre-radical} (resp.
+\emph{pre-coradical}) if for each $X \in \Cat{A}$, $F(X/F(X)) = 0$
+(resp. $F(\ker X \to FX) = 0$).
+\end{definition}
+
 
