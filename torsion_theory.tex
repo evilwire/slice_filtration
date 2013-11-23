@@ -278,3 +278,21 @@ inclusion $FY \to Y$ is the zero map, and hence $Y/FY = Y \in
 \Cat{F}.$
 \end{proof}
 
+\begin{definition}
+Let $\Cat{C}$ be a subcategory of an abelian category; fix $X \in
+\Cat{A}$. We say $Y$ is the \emph{largest $\Cat{C}$-subobject of 
+$X$} if $Y \in \Cat{C}$ is a subobject of $X$ that factors all 
+monomorphisms from objects in $\Cat{C}$ to $X$. That is, for 
+every diagram
+\[
+\begin{diagram}
+  &           & Y         \\
+  &           & \dInto{i} \\
+Z & \rInto{j} & X
+\end{diagram}
+\]
+where $Z \in \Cat{C}$, there exists a map $Z \stackrel{f}{to} Y$ 
+such that $gj = i$.
+\end{definition}
+
+
