@@ -307,4 +307,20 @@ the functor $F: \Cat{A} \to \Cat{T}$ that sends $X \in \Cat{A}$
 to its largest $\Cat{T}$-subobject is a idempotent preradical.
 \end{prop}
 
+\begin{proof}
+Let $f: X \to Y$ be any morphism and $FX \stackrel{i_{FX}}{X}$ 
+and $FY\stackrel{i_{FY}}{Y}$ be the $\Cat{T}$-subobjects of $X$ 
+and $Y$ respectively. Consider the image of $FX$ under $i_{FX}f$, 
+which is a $\Cat{T}$ subobject of $Y$. Hence, there exists a map 
+$\im i_{FX}f \to FY$, and define the map $Ff$ to be the 
+composition of $FX \to \im i_{FX}f \to FY$.
+
+It is clear from the construction that $F$ is a subobject functor.
+
+Since $FX \in \Cat{T}$, it is clear that the largest suboboject
+of $FX$ is itself: hence $F(F(X)) = F(X)$.
+
+By the maximality of $FX$, we see that $X/FX \in \Cat{F}$, and
+certainly, $F(X/FX) = 0$.
+\end{proof}
 
