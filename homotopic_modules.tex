@@ -46,4 +46,15 @@ define a homotopic module strucutre as follows.
 
 Let $X$ be a smooth scheme. Begin by considering the long exact
 localization sequence (Deg.2.5c) associated to the zero section of
-$X \to X \times \A^1$
+$X \to X \times \A^1$:
+\[
+0 \to F^M_n(X \times \A^1) \stackrel{j}{\to} F^M_n(\Gmpt \otimes X) 
+   \stackrel{d}{\to} F^M_{n - 1}(X) \to \cdots
+\]
+where the map $j$ is given by the inclusion of $\Gmpt$ into $\A^1$,
+and $d$ is the map induced by the degree $-1$ map
+\[
+\ptres{E}{0}: M(E(t)) \to M(E)
+\]
+associated to every valuation of $E(t)$ for every generic point 
+$E$ of $X$.
