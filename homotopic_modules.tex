@@ -26,10 +26,23 @@ $t$-structure.
 
 \newcommand{\cmcohom}{A}
 
-Consider a cycle module $M$. According to [Deg2.5], $\cmcohom{0}(-,M)$
-defines a graded presheaf with transfers. According to [Deg06, 6.9],
-presheaf is in fact a sheaf. We write $F^M$ for the corresponding
-sheaf, and define a homotopic module strucutre as follows.
+Let $M$ be a cycle module, and write $M^p(X) = \oplus_{x \in 
+\subsch{p}{X}} M(\resf{x})$. By ---, for all scheme $X$ essentially of 
+finite type, the morphism
+\[
+d_M^p = \sum_{x \in \subsch{p}{X}, y \in \subsch{p + 1}{X}} \ptres{x}{y}
+: M^p(X) \to M^{p + 1}(X)
+\]
+is well defined, and fits into a chain complex
+\[
+\cdots \to M^p(X) \stackrel{d_M}{\to} M^{p + 1} \to \cdots
+\]
+Write $\cmcohom^p(X; M)$ for the $p$th cohomology group of the complex.
+
+According to [Deg2.5], $\cmcohom{0}(-,M)$ defines a graded 
+presheaf with transfers. According to [Deg06, 6.9], presheaf is 
+in fact a sheaf. We write $F^M$ for the corresponding sheaf, and 
+define a homotopic module strucutre as follows.
 
 Let $X$ be a smooth scheme. Begin by considering the long exact
 localization sequence (Deg.2.5c) associated to the zero section of
