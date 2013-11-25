@@ -209,3 +209,33 @@ pullback map described earlier.
 \item If $g: Z \to Y$ is a local complete intersection with $Z$
 emitting resolution of singularities, then $(fg)^* = g^*f^*$.
 \end{enumerate}
+
+In the case where $f$ is a regular closed immersion, the 
+hypothesis that $Y$ emits resolution of singularities is 
+unnecessary. The map $f^*$ can be defined by using deformation
+of the normal cone, following the original idea of Rost (cf 
+[Deg.06, 3.3]).
+
+We will use the following result due to Rost ([Ros96, 12.4]),
+which partially describes the Gysin morphism:
+
+\begin{prop}
+Let $X$ be an integrl scheme with function field $E$, and let $i: 
+Z \to X$ be the closed immersion of a regular irreducible 
+principal divisor, parametrized by $\idprime{p} \in \O_X(X)$. Let 
+$v$ be the valuation of $E$ corresponding to the divisor $Z$. 
+Therefore, the morphism $i^*: \cmcohom^0(X; M) \to \cmcohom^0(Z; 
+M)$ is the restriction of $\special{v}{\idprime{p}}: M(E) \to 
+M(\resf{v})$.
+\end{prop}
+
+To each cartesian square
+\[
+\begin{diagram}
+Y'      & \rTo{j} & X'      \\
+\dTo{g} &         & \dTo{f} \\
+Y       & \rTo{i} & X
+\end{diagram}
+\]
+such that $i$ is a regular closed immersion, we associate a 
+\emph{refined Gysin morphism} $\Delta^*$
