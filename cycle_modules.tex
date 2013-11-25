@@ -266,7 +266,7 @@ $\alpha \in \Cor(X, Y)$, we define a map in the derived category:
 $\alpha$ is the class of a closed irreducible subscheme $Z$ of $X 
 \times Y$. Consider the morphisms:
 \[
-X \stackrel{p}{rightarrow} Z \stackrel{i}{\to} Z \times X \times Y
+X \stackrel{p}{\rightarrow} Z \stackrel{i}{\to} Z \times X \times Y
 \stackrel{q}{\to} Y
 \]
 where $p$ and $q$ denote the canonical projections and $i$, the
@@ -308,3 +308,36 @@ graded by
 \]
 This sequence is natural with respect to proper and flat pushout.
 We have the following proposition:
+
+\begin{prop}
+Consider the following cartesian square:
+\[
+\begin{diagram}
+T       & \rTo{\iota'} & Z       \\
+\dTo{k} &              & \dTo{i} \\
+Y       & \rTo{\iota}  & X
+\end{diagram}
+\]
+for which $\iota$ is a regular closed immersion. Suppose that $i$
+(resp $k$) is a a closed immersion complementary an open 
+immersion $j: U \to X$ (resp $l: V \to X$). Let $h: V \to U$ be
+the map induced by $\iota$. Finally, suppose that $i$ (resp. $k$)
+is of pure codimension equal to $c$ (resp. $d$). Therefore, the
+following diagram is commutative
+\[
+\begin{diagram}
+\cdots & \rTo & \cmcohom^{p - c}_M(Z)_{n - c} & \rTo{i_*} & 
+   \cmcohom^{p}_M(X)_n & \rTo{j^*} & \cmcohom^p_M(U) & 
+   \rTo{\ptres{Z}{U}} & \cmcohom^{p - c + 1}_M(Z)_{n - c} & \rTo 
+   & \cdots \\
+       &      & \dTo{\refgysin}               &           & 
+       \dTo{\iota^*}        &           & \dTo{h^*}       &                    
+       & \dTo{\refgysin}                   \\
+\cdots & \rTo & \cmcohom^{p - d}_M(T)_{n - d} & \rTo{i_*} & 
+   \cmcohom^{p}_M(Y)_n & \rTo{j^*} & \cmcohom^p_M(V) & 
+   \rTo{\ptres{T}{V}} & \cmcohom^{p - c + 1}_M(T)_{n - d} & \rTo 
+   & \cdots
+\end{diagram}
+\]
+
+\end{prop}
