@@ -279,3 +279,32 @@ $i$, $q^*$ the flat pullback and $p_*$ the finite push out.
 
 The property $(\beta\alpha)^* = \alpha^*\beta^*$ is proved in 
 [Deg06, 6.5].
+
+\subsection{Localization Exact sequence}
+
+We recall the localization exact sequence, following [Ros96],
+and prove a supplementary result concerning its functoriality.
+For a closed immersion $i: Z \to X$ purely of codimension $c$,
+let $j: U \to X$ be the open immersion associated to its 
+complement. By using functoriality mentioned above, we obtain
+a short exact sequence of complexes:
+\[
+0 \to C_M^{p - c}(Z)_{n - c} \stackrel{i_*}{\to}
+      C_M^p(X)_n \stackrel{j_*}{\to}
+      C_M^p(U)_n \to 0.
+\]
+from which we have the following long exact sequence:
+\[
+\cdots \to \cmcohom^{p - c}_M(Z)_{n - c} \stackrel{i^*}{\to}
+           \cmcohom^p_M(X)_n \stackrel{j^*}{\to}
+           \cmcohom^p_M(U)_n \stackrel{\ptres{Z}{U}}{\to}
+           \cmcohom^{p - c + 1}_M(Z)_{n - c} \to \cdots
+\]
+where the morphism $\ptres{Z}{U}$ is defined for the associated
+graded by
+\[
+   \sum_{x \in \subsch{p}{U}, z \in \subsch{p - c + 1}{Z}} 
+      \ptres{z}{x}.
+\]
+This sequence is natural with respect to proper and flat pushout.
+We have the following proposition:
