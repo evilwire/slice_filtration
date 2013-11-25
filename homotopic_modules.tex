@@ -27,17 +27,18 @@ $t$-structure.
 \newcommand{\cmcohom}{A}
 
 Let $M$ be a cycle module, and write $M^p(X) = \oplus_{x \in 
-\subsch{p}{X}} M(\resf{x})$. By ---, for all scheme $X$ essentially of 
-finite type, the morphism
+\subsch{p}{X}} M(\resf{x})$. By ---, for all scheme $X$ 
+essentially of finite type, the morphism
 \[
-d_M^p = \sum_{x \in \subsch{p}{X}, y \in \subsch{p + 1}{X}} \ptres{x}{y}
-: M^p(X) \to M^{p + 1}(X)
+d_M^p = \sum_{x \in \subsch{p}{X}, y \in \subsch{p + 1}{X}} 
+\ptres{x}{y} : M^p(X) \to M^{p + 1}(X)
 \]
 is well defined, and fits into a chain complex
 \[
 \cdots \to M^p(X) \stackrel{d_M}{\to} M^{p + 1} \to \cdots
 \]
-Write $\cmcohom^p(X; M)$ for the $p$th cohomology group of the complex.
+Write $\cmcohom^p(X; M)$ for the $p$th cohomology group of the 
+complex.
 
 According to [Deg2.5], $\cmcohom{0}(-,M)$ defines a graded 
 presheaf with transfers. According to [Deg06, 6.9], presheaf is 
@@ -58,3 +59,18 @@ and $d$ is the map induced by the degree $-1$ map
 \]
 associated to every valuation of $E(t)$ for every generic point 
 $E$ of $X$.
+
+Let $s_1: X \to \Gmpt \times X$ be the unit section. Recall that
+$(F^M_n)_{-1}(X) = \ker (s_1^*)$. In fact, since $F^M_n$ is 
+homotopy invariant, the canonical morphism $\ker s_1^* \to
+\cok j^*$ is an isomorphism. Therefore, the map $\ptres{0}^X$ 
+induces a map
+\[
+\loopCM_n : (RF^M_{n})(X) \to F^M_{n - 1}(X).
+\]
+First, the localization sequence, introduced earlier, is
+compatible with the transfers on $X$. This follows from 
+2.5 and corollary 2.8. Therefore, $\loopCM_n$ defines is a
+map between homotopy invariant sheaves with transfers. Further,
+for all function field $E$, $\
+
