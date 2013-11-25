@@ -238,4 +238,21 @@ Y       & \rTo{i} & X
 \end{diagram}
 \]
 such that $i$ is a regular closed immersion, we associate a 
-\emph{refined Gysin morphism} $\Delta^*$
+\emph{refined Gysin morphism} $\refgysin$ in the derived 
+category:
+\[
+\refgysin: C_M^*(X') \to C_M^*(Y')
+\]
+that satisfies the following properties:
+\begin{enumerate}
+\item If $j$ is regular and the morphism of the normal cones
+$N_{Y'}(X') \to g^{-1}N_Y(X)$ is an isomorphism, then $\refgysin = 
+j^*$
+
+\item If $f$ is proper, then $i^*f_* = g_*\refgysin$.
+\end{enumerate}
+
+Further, if the canonical immersion of the cone $C_{Y'}(X') \to
+g^{-1}N_Y(X)$ in the normal fiber of $i$ is of pure codimension
+equal to $e$, then the morphism $\refgysin$ is of cohomological
+degree $e$.
