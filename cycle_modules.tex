@@ -1,0 +1,182 @@
+\section{Cycle Modules}
+
+Let us recall definition and results of cycle modules, first
+defined in \cite{Ro96}. In the following, let $S$ be a separated 
+scheme of finite type over any base field $k$. Let $\fields(B)$ 
+be the class of fields $F$ finitely generated over $k$ such that
+$\spec F$ emits a map to $B$.
+
+\begin{definition}
+A \emph{cycle premodule} on $\fields(B)$ is an object function
+that associated to each $F \in \fields(B)$ a $\Z$-graded abelian
+group $M(F) = \prod_i M_i(K)$ with the following data:
+
+\begin{enumerate}
+\item[\textbf{D1.}] For each $\phi: F \to E$, there is a degree 0
+map $\phi_*: M(F) \to M(E)$ called the \emph{restriction map 
+associated to $\phi$}
+
+\item[\textbf{D2.}] For each finite $\phi: F \to E$, there is a 
+degree 0 map $\phi^*: M(E) \to M(F)$ called the \emph{corestriction
+map associated to $\phi$}
+
+\item[\textbf{D3.}] For each $F$, the group $M(F)$ is equipped
+with a left $\milK_*(F)$-module, where $\milK_*(F)$ is the Milnor
+$K$-ring of $F$.
+
+\item[\textbf{D4.}] For any valuation $v$ of $F$, there exists 
+maps $\res{v}: M(F) \to M(\resf(v))$ and $\special{v}{\idprime{p}}$
+called the \emph{residue} and \emph{specialization} respectively, 
+where $\resf(v)$ is the residue field of $v$ and $\idprime{p}$ is 
+a prime of $v$,
+\end{enumerate}
+
+subject to the following conditions:
+
+\begin{enumerate}
+\item[\textbf{R1a.}] For each $\phi: F \to E$ and $\psi: E \to L$,
+$(\psi \comp \phi)_* = \psi_* \comp \phi_*$
+
+\item[\textbf{R1b.}] For each finite $\phi: F \to E$ and $\psi: E
+\to L$, $(\psi \comp \phi)^* = \phi^* \comp \psi^*$
+
+\item[\textbf{R1c.}] For $\phi: F \to E$ and $\psi: E \to L$ with
+$\phi$ finite, define $R = E \otimes_F L$, and let $\idprime{p}$
+be any prime ideal of $R$. (As $R$ is Artin, let $l_p$ be the 
+length of the localized ring $R_{(\idprime{p})}$), and 
+$\phi_{\idprime{p}}: L \to R/{\idprime{p}}$ and 
+$\psi_{\idprime{p}}: E \to R/{\idprime{p}}$ be natural maps.
+\[
+\psi_*\comp \phi^* = \sum_{\idprime{p}} l_p \cdot 
+(\phi_{\idprime{p}})^* \comp (\psi_{\idprime{p}})_*.
+\]
+
+\item[\textbf{R2.}] For $\phi: F \to E$, $x \in \milK_*F$, $y \in
+\milK_*E$, $\rho \in M(F)$, and $\mu \in M(E)$, then:
+
+\item[\textbf{R2a.}] $\phi_*(x \cdot \rho) = \phi_*(x) \cdot 
+\phi_*(\rho)$.
+
+\item[\textbf{R2b.}] if $\phi$ is finite, $\phi^*(\phi_*(x) \cdot 
+\mu) = x \cdot \phi^*(\mu)$.
+
+\item[\textbf{R2c.}] if $\phi$ is finite, $\phi^*(y \cdot 
+\phi_*(\rho)) = \phi^*(y) \cdot \rho$.
+
+\item[\textbf{R3.}] For $\phi: F \to E$, $v$ a valuation on $E$
+and $w$ and a valuation on $F$:
+
+\item[\textbf{R3a.}] Suppose $w$ is a nontrivial restriction of 
+$v$ with ramification index $e$. Let $\phib: \resf{w} \to 
+\resf{v}$ be the induced map. Then:
+\[
+\res{v} \comp \phi_* = e \phib_* \comp \res{w}.
+\]
+
+\item[\textbf{R3b.}] Let $\phi$ be finite. For each valuation $v$ 
+an extension of $w$ to $E$, let $\phi_v: \resf{w} \to \resf{v}$
+be the induced map. Then
+\[
+\res{v} \comp \phi^* \sum_{v} \comp \res{v}.
+\]
+
+\item[\textbf{R3c.}] Suppose $v$ restricts to a trivial valuation
+$w$ on $F$. Then
+\[
+\res{v} \comp \phi_* = 0
+\]
+
+\item[\textbf{R3d.}] Suppose $v$ again restricts to a trivial 
+valuation, and let $\phib: F \to \resf{v}$ be the induced map, and
+$\idprime{p}$ a prime of $v$. Then
+\[
+\special{v}{\idprime{p}} \comp \phi_* = \phib_*
+\]
+
+\item[\textbf{R3e.}] Let $u$ be a $v$-unit, and $\rho \in M(F)$,
+one has
+\[
+\res{v}(\{u\} \cdot \rho) = -\{\overline{u}\} \cdot \res{v}(\rho).
+\]
+\end{enumerate}
+\end{definition}
+
+\begin{definition}
+A homomorphism $\omega: M \to M'$ of cycle premodules over 
+$\fields(B)$ of even (resp. odd) type is given by homomorphisms:
+\[
+\omega_F: M(F) \to M'(F)
+\]
+such that for each $\phi: F \to E$
+\begin{enumerate}
+\item $\phi_* \comp \omega_F = \omega_E \comp \phi_*$
+
+\item $\phi^* \comp \omega_E = \omega_F \comp \phi^*$
+
+\item for $\{a\} \in \milK_*F$ and $\rho \in M(F)$, $\{a\} \cdot 
+\omega_F(\rho) = \omega_F(\{a\} \cdot \rho)$ (resp. 
+$\{a\} \cdot \omega_F(\rho) = -\omega_F(\{a\} \cdot \rho)$)
+
+\item $\res{v} \comp \omega_F = \omega_{\resf{v}} \comp \res{v}$
+(resp. $\res{v} \comp \omega_F = -\omega_{\resf{v}} \comp 
+\res{v}$).
+\end{enumerate}
+\end{definition}
+
+\begin{ex}
+$\milK_*$ is a cycle premodule.
+\end{ex}
+
+For $X$ a $k$-scheme, let $\subsch{1}{X}$ denote the collection of 
+codimension 1 subscheme. Write $\xi_X$ be the generic point of an
+irreducible $X$ with $K_X = \O_X,\xi_X$. If $X$ is normal, then 
+for $x \in \codim{1}{X}$, the local ring $\O_X,x$ is a valuation 
+ring of $K_X$ with residue field $\resf{x}$. Write $M(x)$ for 
+$M(\resf{x})$, and $\res{x}: M(\xi_X) \to M(x)$ for the 
+restriction map.
+
+Furthermore, for $x, y \in X$, let $Z$ be the closed subscheme 
+determined by $x$, and $\overline{Z}$ be the normalization $Z$.
+Define
+\[
+\ptres{x}{y}: M(x) \to M(y)
+\]
+by
+\[
+\ptres{x}{y} = 
+\begin{cases}
+0 & y \notin \subsch{1}{Z} \\
+\sum_{z|y} \phi_{\resf{z},\resf{x}}^* \comp \res{z} & \textrm{otherwise}
+\end{cases}
+\]
+In case $\ptres{x}{y}$ is nonzero, the sum is taken over all $z$
+lying over $y \in \subsch{1}{Z}$, and
+$\phi_{\resf{z},\resf{y}}^*$ is the corestriction map associated to 
+the finite field extension $\resf{y} \to \resf{z}$.
+
+\begin{definition}
+A cycle module $M$ on $\fields(B)$ is a cycle premodule which
+satisfies the following conditions:
+
+\begin{enumerate}
+\item[\textbf{(FD)}] \itemhead{Finite support of divisors.} 
+$X$ be a normal scheme and $\rho \in M(\xi_X)$. Then $\res{x}: 
+M(\xi_X) \to M(X)$ is 0 for all but finitely many $x \in 
+\subsch{1}{X}$.
+
+\item[\textbf{(C)}] \itemhead{Closedness.} If $X$ is an integral
+local local of dimension 2 with closed point $x_0$, then the map 
+from $M(\xi_X)$ to $M(x_0)$ given by
+\[
+\sum_{x \in \subsch{1}{X}} \ptres{x_0}{x} \comp \ptres{x}{\xi}
+\]
+is 0.
+\end{enumerate}
+\end{definition}
+
+Let $\Cat{MCyc}$ denote the category of cycle modules. In ---,
+D\'eglise demonstrated that $\Cat{MCyc}$ is categorically 
+equivalent to the category of homotopic modules (see -- ), which
+we represent by $\HI_*$. 
+
+
