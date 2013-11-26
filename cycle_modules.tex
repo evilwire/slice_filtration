@@ -324,7 +324,7 @@ for which $\iota$ is a regular closed immersion. Suppose that $i$
 (resp $k$) is a a closed immersion complementary an open 
 immersion $j: U \to X$ (resp $l: V \to X$). Let $h: V \to U$ be
 the map induced by $\iota$. Finally, suppose that $i$ (resp. $k$)
-is of pure codimension equal to $c$ (resp. $d$). Therefore, the
+is of pure codimension equal to $c$ (resp. $d$). Then, the 
 following diagram is commutative
 \[
 \begin{diagram}
@@ -337,7 +337,7 @@ following diagram is commutative
        & \dTo{\refgysin}                   \\
 \cdots & \rTo & \cmcohom^{p - d}_M(T)_{n - d} & \rTo{i_*} & 
    \cmcohom^{p}_M(Y)_n & \rTo{j^*} & \cmcohom^p_M(V) & 
-   \rTo{\ptres{T}{V}} & \cmcohom^{p - c + 1}_M(T)_{n - d} & \rTo 
+   \rTo{\ptres{T}{V}} & \cmcohom^{p - d + 1}_M(T)_{n - d} & \rTo 
    & \cdots
 \end{diagram}
 \]
@@ -385,3 +385,34 @@ localization sequences.
 To conclude, it suffices to point out that the maps $p^*$,
 $p_T^*$ and $p_U^*$ are quasi-isomorphisms.
 \end{proof}
+
+\begin{cor}
+Consider the following cartesian square:
+\[
+\begin{diagram}
+T       & \rTo{g}      & Z       \\
+\dTo{k} &              & \dTo{i} \\
+Y       & \rTo{f}      & X
+\end{diagram}
+\]
+of smooth schemes such that $i$ (resp. $k$) is a closed immersion 
+of pure codimension equal to $c$, with a complement open immersion 
+$j: U \to X$ (resp. $l: V \to X$). Let $h: V \to U$ represent the 
+map induced by $f$. Then, the following diagram is commutative:
+\[
+\begin{diagram}
+\cdots & \rTo & \cmcohom^{p - c}_M(Z)_{n - c} & \rTo{i_*} & 
+   \cmcohom^{p}_M(X)_n & \rTo{j^*} & \cmcohom^p_M(U) & 
+   \rTo{\ptres{Z}{U}} & \cmcohom^{p - c + 1}_M(Z)_{n - c} & \rTo 
+   & \cdots \\
+       &      & \dTo{g^*}                     &           
+       & \dTo{f^*}           &           & \dTo{h^*}       
+       &                    & \dTo{g^*}                         \\
+\cdots & \rTo & \cmcohom^{p - c}_M(T)_{n - c} & \rTo{i_*} & 
+   \cmcohom^{p}_M(Y)_n & \rTo{j^*} & \cmcohom^p_M(V) & 
+   \rTo{\ptres{T}{V}} & \cmcohom^{p - c + 1}_M(T)_{n - c} & \rTo 
+   & \cdots
+\end{diagram}
+\]
+
+\end{cor}
