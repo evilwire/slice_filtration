@@ -363,11 +363,25 @@ It suffice to resume the proof of Proposition 4.5 of [Deg06]
 for the following case:
 \[
 \begin{diagram}
-T               & \rTo       &   & Z \\
-\dTo(0,4)       & \rdTo      &   & \dLine(0,4) &\rdTo      \\
-                &            & Y & \rTo        &           & X \\
-                & \ldEquals  &   & \dTo        & \ldEquals \\
-Y               & \rTo       &   & X
+T               & \rTo        &   & Z \\
+\dTo(0,4)       & \rdTo{k}    &   & \dLine(0,4) &\rdTo{i}   \\
+                &             & Y & \rTo        &           & X \\
+                & \ldEquals   &   & \dTo        & \ldEquals \\
+Y               & \rTo{\iota} &   & X
 \end{diagram}
 \]
+In this case, we have the following commutative diagram, with
+analogous notation as \emph{loc. cit.}
+%\[
+%\begin{diagram}
+%\end{diagram}
+%\]
+The squares (1), (2), and (3) are commutative by similar reasons
+as given in \emph{loc. cit.}, and (1'), (2') and (3') are 
+clearly commutative. Each map that appear in the diagram are
+well-defined maps of complexes, and induce maps between long exact
+localization sequences.
+
+To conclude, it suffices to point out that the maps $p^*$,
+$p_T^*$ and $p_U^*$ are quasi-isomorphisms.
 \end{proof}
