@@ -25,7 +25,7 @@ with a left $\milK_*(F)$-module, where $\milK_*(F)$ is the Milnor
 $K$-ring of $F$.
 
 \item[\textbf{D4.}] For any valuation $v$ of $F$, there exists 
-maps $\res{v}: M(F) \to M(\resf(v))$ and $\special{v}{\idprime{p}}$
+maps $\res{v}: M(F) \to M(\resf(v))$ and $\Special{v}{\idprime{p}}$
 called the \emph{residue} and \emph{specialization} respectively, 
 where $\resf(v)$ is the residue field of $v$ and $\idprime{p}$ is 
 a prime of $v$,
@@ -90,7 +90,7 @@ $w$ on $F$. Then
 valuation, and let $\phib: F \to \resf{v}$ be the induced map, and
 $\idprime{p}$ a prime of $v$. Then
 \[
-\special{v}{\idprime{p}} \comp \phi_* = \phib_*
+\Special{v}{\idprime{p}} \comp \phi_* = \phib_*
 \]
 
 \item[\textbf{R3e.}] Let $u$ be a $v$-unit, and $\rho \in M(F)$,
@@ -220,12 +220,12 @@ We will use the following result due to Rost ([Ros96, 12.4]),
 which partially describes the Gysin morphism:
 
 \begin{prop}
-Let $X$ be an integrl scheme with function field $E$, and let $i: 
+Let $X$ be an integral scheme with function field $E$, and let $i: 
 Z \to X$ be the closed immersion of a regular irreducible 
 principal divisor, parametrized by $\idprime{p} \in \O_X(X)$. Let 
 $v$ be the valuation of $E$ corresponding to the divisor $Z$. 
 Therefore, the morphism $i^*: \cmcohom^0(X; M) \to \cmcohom^0(Z; 
-M)$ is the restriction of $\special{v}{\idprime{p}}: M(E) \to 
+M)$ is the restriction of $\Special{v}{\idprime{p}}: M(E) \to 
 M(\resf{v})$.
 \end{prop}
 
@@ -246,8 +246,10 @@ category:
 that satisfies the following properties:
 \begin{enumerate}
 \item If $j$ is regular and the morphism of the normal cones
-$N_{Y'}(X') \to g^{-1}N_Y(X)$ is an isomorphism, then $\refgysin = 
-j^*$
+\[
+N_{Y'}(X') \to g^{-1}N_Y(X)
+\] 
+is an isomorphism, then $\refgysin = j^*$.
 
 \item If $f$ is proper, then $i^*f_* = g_*\refgysin$.
 \end{enumerate}
@@ -339,5 +341,20 @@ following diagram is commutative
    & \cdots
 \end{diagram}
 \]
+\end{prop} 
 
-\end{prop}
+\begin{rmk}
+We could generalize the previous proposition to the case of 
+refined Gysin maps as in Prop. 4.5 of [Deg06]. We leave this as a 
+task to the reader.
+\end{rmk}
+
+\begin{rmk}
+While the hypothesis of $i$ having pure codimension is natural, 
+the one about $k$ is not, especially in the case where $Y$ does 
+not intersect $Z$ transversely. Here, the hypothesis serves only
+to determine the cohomological degree of the maps, and the 
+hypothesis could easily be replaced by the assumption that the
+maps are homogeneous with respect to cohomology degree.
+\end{rmk}
+
