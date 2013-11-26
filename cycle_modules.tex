@@ -421,4 +421,25 @@ In [Deg08B], a closed pair is a couple $(X, Z)$ such that $X$ is a
 smooth scheme and $Z$ is a closed subscheme. We say that $(X, Z)$ 
 is \emph{smooth} (resp. \emph{of codimension $n$}) if $Z$ is 
 smooth (resp.  purely of codimension $n$ in $X$).  
+
+If $i: Z \to X$ is the associated closed immersion, a 
+\emph{morphism of closed pairs} $(f, g)$ is a commutative square
+\[
+\begin{diagram}
+T       & \rTo{g}      & Z       \\
+\dTo{k} &              & \dTo{i} \\
+Y       & \rTo{f}      & X
+\end{diagram}
+\]
+which is topologically cartesian. We say that $(f, g)$ is 
+\emph{cartesian} (resp. \emph{transverse}) when the square is
+cartesian (resp. and the morphism induced on the normal cones
+\[
+C_T Y \to g^{-1}C_Z X
+\]
+is an isomorphism.)
+
+The preceding corollary shows that the localization sequence 
+associated to a cycle module $M$ and a closed pair $(X, Z)$ is 
+natural with respect to transverse morphisms.
 \end{rmk}
