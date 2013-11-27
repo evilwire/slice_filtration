@@ -446,9 +446,12 @@ natural with respect to transverse morphisms.
 
 \subsection{Associated homotopy module}
 
-Let $M$ be a cycle module, and write $M^p(X) = \oplus_{x \in 
-\subsch{p}{X}} M(\resf{x})$. By ---, for all scheme $X$ 
-essentially of finite type, the morphism
+Let $M$ be a cycle module, and write 
+\[
+M^p(X) = \bigoplus_{x \in \subsch{p}{X}} M(\resf{x}).
+\] 
+By ---, for all scheme $X$ essentially of finite type, the 
+morphism
 \[
 d_M^p = \sum_{x \in \subsch{p}{X}, y \in \subsch{p + 1}{X}} 
 \ptres{x}{y} : M^p(X) \to M^{p + 1}(X)
@@ -512,8 +515,8 @@ M(E)\{n\} = ``\varprojlim_{A \subset E}'' M(\spec(A))\{n\}
 in the category of pro-objcts of $\DM_{gm}(k)$. We write 
 $\GenMot$ for the category of generic motives.
 
-Let $(F_*, \susp_n)$ be a homotopic module. Recall from -- that
-$(F_*, \susp_n)$ can be identified with a functor $\phi: \DM_{gm}
+Let $(F_*, \loopCM_n)$ be a homotopic module. Recall from -- that
+$(F_*, \loopCM_n)$ can be identified with a functor $\phi: \DM_{gm}
 \to \Ab$, and let $\widehat{\phi}$ be its canonical extension to
 the category of pro-$\DM_{gm}$. As established in [Deg08B, 6.2.1],
 the restriction of $\widehat{\phi}$ to $\GenMot$ is a cycle module
@@ -550,12 +553,44 @@ to $x$. Consider the closed immersion $s_x: X \to \Gmpt \times X$
 induced by this section. From this setup, we obtain the following 
 morphism:
 \[
-\gamma_x: F_{n - 1}(X) \stackrel{\susp_{n - 1}}{\to} (F_n)_{-1}(X)
-\stackrel{\nu}{\to} F_n(\Gmpt \times X) \stackrel{s_x^*}{\to} F_n(X)
+\gamma_x: F_{n - 1}(X) \stackrel{\loopCM_{n - 1}}{\to} (F_n)_{-1}(X)
+\stackrel{\nu}{\to} F_n(\Gmpt \times X) \stackrel{s_x^*}{\to} 
+F_n(X)
 \]
-where $\nu$ is the canonical inclusion. This morphism is compatible
-with the restriction to an open subscheme of $X$, and induced the
-desired morphism for $\widehat{F}_*$.
+where $\nu$ is the canonical inclusion. This morphism is 
+compatible with the restriction to an open subscheme of $X$, and 
+induced the desired morphism for $\widehat{F}_*$.
 
-\item[\textbf{D4.}]
+\item[\textbf{D4.}] Following Deg08B, 5.4, Let $E$ be a function 
+field, and $v$ a valuation on $E$. We could find a smooth scheme
+$X$ together with a codimension 1 point $x$ such that the induced
+reduced structure $Z$ associated to $x$ in $X$ is smooth with 
+local ring $\O_{X,x}$ isomorphic to the ring of integers of $v$.
+
+Let $U = X - Z$ with open immersion $j: U \to X$. Recall that the
+motive $M_Z(X)$ of the pair $(X, Z)$ is defined as an object of
+$\DMeff_{gm}$ represented by the complex concentrated in degree 0
+and $-1$ with a single nonzero differential given by $j$. This
+motive fits into the following distringuished triangle:
+\[
+M_Z(X)[-1] \stackrel{\res{X, Z}'}{\to} M(U) \stackrel{j*}{\to}
+M(X) \stackrel{+1}{\to} M_Z(X).
+\]
+We have defined in Deg08B, 2.2.5 a purity isomorphism as follows:
+\[
+\purity{X, Z}: M_Z(X) \to M(Z)(1)[2].
+\]
+From this, we obtain the following map (which we write as 
+$\res{X, Z}$) given by:
+\begin{align*}
+F_n(U) &= \phi_n(M(U)) \xrightarrow{\phi_n(\res{X,Z}')} 
+   \phi_n(M_Z(X)[-1]) \\
+   &\xrightarrow{\phi_n(\purity{X, Z}^{-1})} \phi_n(M(Z)(1)[2])
+    = (F_n)_{-1}(Z) \stackrel{\loopCM_n^{-1}}{\to} F_{n - 1}(Z),
+\end{align*}
+where we write $\phi_n(\mathcal{M}) = \phi(\mathcal{M}(n)[2n])$
+for a motive $\mathcal{M}$. The residue morphism of the cycle
+module $\widehat{F}_*$ is given by the inductive limit of the
+morphisms $\res{U, Z \cap U}$ given by the neighborhood $U$ of
+$x \in X$.
 \end{enumerate}
