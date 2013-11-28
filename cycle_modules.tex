@@ -291,18 +291,18 @@ For a closed immersion $i: Z \to X$ purely of codimension $c$,
 let $j: U \to X$ be the open immersion associated to its 
 complement. By using functoriality mentioned above, we obtain
 a short exact sequence of complexes:
-\[
+\begin{equation}\label{eq_loc_exact_seq}
 0 \to C_M^{p - c}(Z)_{n - c} \stackrel{i_*}{\to}
       C_M^p(X)_n \stackrel{j_*}{\to}
       C_M^p(U)_n \to 0.
-\]
+\end{equation}
 from which we have the following long exact sequence:
-\[
+\begin{equation}\label{eq_loc_long_exact_seq}
 \cdots \to \cmcohom^{p - c}_M(Z)_{n - c} \stackrel{i^*}{\to}
            \cmcohom^p_M(X)_n \stackrel{j^*}{\to}
            \cmcohom^p_M(U)_n \stackrel{\ptres{Z}{U}}{\to}
            \cmcohom^{p - c + 1}_M(Z)_{n - c} \to \cdots
-\]
+\end{equation}
 where the morphism $\ptres{Z}{U}$ is defined for the associated
 graded by
 \[
@@ -765,5 +765,26 @@ assocaited to the homotopy module $F^M$ defined in section 1.3.
 By definition, the isomorphism $\rho_X$ corresponds to an 
 isomorphism
 \[
-\cmcohom^p(X; M)_n \to \phi_n
+\cmcohom^p(X; M)_n \to \phi_n(M(X)[-p]).
 \]
+Furthermore, consider a closed immersion $i: Z \to X$ of smooth 
+schemes and $j: U \to X$ the open immersion complement to $i$. 
+Suppose that $i$ is of pure codimension equal to $c$. We see that
+the localization exact sequence in Equation 
+(\ref{eq_loc_exact_seq}) gives rise to the following map, 
+represented by the dotted arrow, that makes the following diagram
+commutative:
+\[
+\begin{diagram}
+0 & \rTo & \gcmplx{M}(Z)_{n - c}[-c] & \rTo{i^*}            
+  & \gcmplx{M}(X)_n     & \rTo{\;\; j^*\;\;} & \gcmplx{M}(U)_n     
+  & \rTo & 0 \\
+  &      & \dDotsto{(1)}             &                      
+  & \dTo                &           & \dTo                \\
+0 & \rTo & R\Gamma_Z(X, M^*_X)_n     & \rTo{\phantom{aaaa}} 
+  & R\Gamma(X, M^*_X)_n & \rTo{\;\; j^*\;\;} & R\Gamma(U, M^*_X)_n 
+  & \rTo & 0.
+\end{diagram}
+\]
+Here, we again use the fact that the complex $M^*_X$ satisfy the
+properties of Brown-Gersten.
