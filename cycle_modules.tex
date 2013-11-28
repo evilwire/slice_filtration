@@ -615,12 +615,12 @@ by recalling the functoriality properties in Deg08A 2.1:
 M^*: V/X \mapsto M*(V).
 \]
 We show that this is a Nisnevich sheaf [see Deg08B, proof of 6.10].
-In addition, we claim that:
+Furthermore, set
 \[
-F^M_X = \sheaf{H}^0(M^*)
+F^M_X = \sheaf{H}^0(M^*).
 \]
 Therefore, $F^M_X$ is the restriction of the Nisnevich sheaf $F^M$,
-defined on the large Nisnevich site $\NisSite$ to the small site
+defined on the large Nisnevich site $\SmSite{k}$ to the small site
 $X_{\Nis}$. By [Ros96, 6.1], the map
 \[
 F^M_X \to M^*
@@ -650,3 +650,84 @@ The isomorphism $\rho_X$ defined in Equation
 \ref{eq_cm_hnis_equiv} is natural in $X$ with respect to any
 scheme morphisms.
 \end{lem}
+\begin{proof}
+Note that, since $F^M_X$ is a sheaf on $\SmSite{k}$, for all 
+morphisms $f: Y \to X$ of smooth schemes, we have a canonical
+natural transformation1:
+\[
+F^M_X \to f_*F^M_Y
+\]
+which induces the following map of the derived category:
+\[
+\tau_f: F^M_X \to Rf_*F^M_Y.
+\]
+The proof consists of lifting this transformation to the level
+of the resolution $M^*$.
+
+We first consider the case where $f$ is flat. Following 
+[Ros96, (3.4)] we have the following map between the complexes:
+\[
+f^*: M^*(X) \to M^*(Y)
+\]
+which is natural in $X$ with respect to \'etale morphisms. The
+corresponding natural transformation on $X_{\Nis}$ define a map
+in the derived category of abelian sheaves on $X_{\Nis}$:
+\[
+\eta_f: M^*(X) \to f_*M^*_(Y) = Rf_*M^*_Y.
+\]
+The last equality results from the fact tat $M^*(Y)$ satisfies
+the property of Brown-Gersten. By definition of the structure of
+the sheaf $F^M$, the following diagram commutes:
+\[
+\begin{diagram}
+F^M_X  & \rTo{\tau_f} & Rf_* F^M_Y \\
+\dTo   &              & \dTo       \\
+M^*(X) & \rTo{\eta_f} & Rf_*M^*_Y.
+\end{diagram}
+\]
+In this case, it follows the $\rho$ defined in the statement of
+the lemma is natural with respect to flat morphisms. We remark
+that if $f$ is the projection of a vector bundle, then $\eta_f$
+is a quasi-isomorphism.
+
+It remains to consider the case where $f$ is a closed immersion
+$Z \to X$ of smooth schemes. Let $N$ be the normal bundle 
+assocaited to $i$. The specialization of the normal bundle defined
+by Rost (cf. [Ros96, sec 11]) is a morphism of complexes
+\[
+\sigma_ZX: M^*(X) \to M^*(N)
+\]
+which is natural in $X$, in particular, with respect to \'etale
+morphisms (cf. [Deg06, 2.2]). We write $\nu$ for the composition
+\[
+N \stackrel{p}{\to} Z \stackrel{i}{\to} X.
+\]
+In this case, we obtain the following canonical map in the derived 
+category
+\[
+\sigma_i: M^*(X) \to R\nu_*M^*(N).
+\]
+Since the map $\eta_p$ is a quasi-isomorphism, we have therefore a
+canonical map in the derived category
+\[
+\eta_i: M^*(X) \to Ri_*M^*(Z).
+\]
+Lastly, recall that, by definition of the pull-back on $F^M$, the
+following diagram is commutative:
+\[
+\begin{diagram}
+F^M(X) & \rTo{i^*}         &        &           & F^M(Z) \\
+\dTo   &                   &        &           & \dTo   \\
+M^*(X) & \rTo{\sigma_Z(X)} & M^*(N) & \lTo{p^*} & M^*(Z),
+\end{diagram}
+\]
+from which, we see that the following diagram is commutative:
+\[
+\begin{diagram}
+F^M_X  & \rTo{\tau_i} & Ri_*F^M_Z \\
+\dTo   &              & \dTo      \\
+M^*(X) & \rTo{\eta_i} & Ri_*M^*_Z
+\end{diagram}
+\]
+which concludes the proof.
+\end{proof}
