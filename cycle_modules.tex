@@ -672,9 +672,9 @@ f^*: M^*(X) \to M^*(Y)
 which is natural in $X$ with respect to \'etale morphisms. The
 corresponding natural transformation on $X_{\Nis}$ define a map
 in the derived category of abelian sheaves on $X_{\Nis}$:
-\[
+\begin{equation}\label{eq_3_3_a}
 \eta_f: M^*(X) \to f_*M^*_(Y) = Rf_*M^*_Y.
-\]
+\end{equation}
 The last equality results from the fact tat $M^*(Y)$ satisfies
 the property of Brown-Gersten. By definition of the structure of
 the sheaf $F^M$, the following diagram commutes:
@@ -709,9 +709,9 @@ category
 \]
 Since the map $\eta_p$ is a quasi-isomorphism, we have therefore a
 canonical map in the derived category
-\[
+\begin{equation}\label{eq_3_3_b}
 \eta_i: M^*(X) \to Ri_*M^*(Z).
-\]
+\end{equation}
 Lastly, recall that, by definition of the pull-back on $F^M$, the
 following diagram is commutative:
 \[
@@ -738,4 +738,19 @@ in proposition 3.10.
 \end{rmk}
 
 \begin{rmk}
+The constructions given in Equations (\ref{eq_3_3_a}) and 
+(\ref{eq_3_3_b}) of the preceding proof give us a way to associate
+to all scheme maps $f: Y \to X$ a commutative diagram in the 
+derived category of sheaves on $X_{\Nis}$:
+\[
+\begin{diagram}
+F^M_X  & \rTo{\tau_f} & Rf_*F^M_Y \\
+\dTo   &              & \dTo      \\
+M^*(X) & \rTo{\eta_f} & Rf_*M^*_Y,
+\end{diagram}
+\]
+obtained by considering the factorization of $f$ by the regular
+immersion of $Y$ into the graph of $f$ followed by a projection. 
+We can show that $\eta_f$ is compatible with the composition of 
+these maps.
 \end{rmk}
