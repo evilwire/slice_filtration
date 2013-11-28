@@ -614,3 +614,34 @@ by recalling the functoriality properties in Deg08A 2.1:
 \[
 M^*: V/X \mapsto M*(V).
 \]
+We show that this is a Nisnevich sheaf [see Deg08B, proof of 6.10].
+In addition, we claim that:
+\[
+F^M_X = \sheaf{H}^0(M^*)
+\]
+Therefore, $F^M_X$ is the restriction of the Nisnevich sheaf $F^M$,
+defined on the large Nisnevich site $\NisSite$ to the small site
+$X_{\Nis}$. By [Ros96, 6.1], the map
+\[
+F^M_X \to M^*
+\]
+is a quasi-isomorphism. \footnote{The complex of sheaves $M^*$ is 
+the Gersten resolution of the sheaf $F^M$. It's the Nisnevich 
+version of the resolution of Cousin in [Har66].} Therefore, it 
+induces an isomorphism
+\[
+\hnis^p(X; F^M_X) \to \hnis^p(X; M^*).
+\]
+As detailed in [Deg08B, 6.10], the complex $M^*$ satisfies the
+properties of Brown-Gersten in the sense of [CD09A, 1.1.9]. From 
+the proof of \emph{loc. cit} 1.1.10, we deduce that the canonical
+map
+\[
+H^p(M^*(X)) \to \hnis^p(X; M^*)
+\]
+is an isomorphism. The two isomorphisms define:
+\begin{equation}
+\rho_X: \cmcohom^p(X; M) = H^p(M^*(X)) \stackrel{\sim}{\to}
+   \hnis^p(X; F^M_X) \simeq \hnis(X; F^M).
+\end{equation}
+
