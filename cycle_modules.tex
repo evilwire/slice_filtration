@@ -174,8 +174,8 @@ is 0.
 \end{enumerate}
 \end{definition}
 
-Let $\Cat{MCyc}$ denote the category of cycle modules. In ---,
-D\'eglise demonstrated that $\Cat{MCyc}$ is categorically 
+Let $\CycMod$ denote the category of cycle modules. In ---,
+D\'eglise demonstrated that $\CycMod$ is categorically 
 equivalent to the category of homotopic modules (see -- ), which
 we represent by $\HI_*$. 
 
@@ -901,9 +901,12 @@ closed immersion $i$ admit a retraction and the map $\rho_{X, Z}$
 We are now ready to prove the main theorem on the correspondence 
 between cycle modules and homotopy modules.
 
-\begin{thm}\label{thm_corresp_cyc_mod_hom_mod}s
+\begin{thm}\label{thm_corresp_cyc_mod_hom_mod}
 The functors
 \begin{align*}
-\HI_* &\leftrightarrow \CycMod
+\HI_* &\leftrightarrows \CycMod \\
+F_* & \mapsto \widehat{F}_*    \\
+F^M_* & \mapsfrom M
 \end{align*}
+are equivalence of categories from one to the other.
 \end{thm}
