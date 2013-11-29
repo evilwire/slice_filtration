@@ -274,7 +274,7 @@ X \stackrel{p}{\rightarrow} Z \stackrel{i}{\to} Z \times X \times Y
 \]
 where $p$ and $q$ denote the canonical projections and $i$, the
 graph of the closed immesion $Z \to X \times Y$. Therefore,
-\begin{equation}
+\begin{equation}\label{eq_2_5_a}
 \alpha = p_* i^*q^*
 \end{equation}
 where $i^*$ denotes the Gysin map of a regular closed immersion 
@@ -999,5 +999,37 @@ of Lemma \ref{lem_3_6} applied to all neighborhood $U$ of $x$ in
 $X$ of the closed immersion $i: Z \cap U \to U$ in the case 
 $c = 1, p = 1$.
 
+\textbf{Second isomorphism} : Consider a homotopy module $(F_*, 
+\loopCM_*)$. For all smooth scheme $X$, by considering the 
+inductive limit of restriction maps $F(X) \to F(U)$ for open 
+subschemes $U$ of $X$, we obtain a map $F_*(X) \to 
+\gcmplx{\assocCM{F_*}}(X)$. By the definition of differential,
+this map induces a homogeneous map $b_X: F_*(X) \to \cmcohom^0(X; 
+\assocCM{F_*})$ of degree 0.
 
+The key point is to show that this map is natural with respect to
+finite correspondences. Let $\alpha \in \Cor(X, Y)$ be a finite 
+correspondence between smooth schemes. We can assume in addition 
+that $X$ and $Y$ are connected. Recall that for all open dense 
+$j: U \to X$, the map $j^* : \cmcohom^0(X; \assocCM{F_*}) \to 
+\cmcohom^0(U; \assocCM{F_*})$ is injective by the localization 
+exact sequence (\ref{eq_loc_long_exact_seq}). Therefore, we can 
+replace $\alpha$ by $\alpha \comp j$ and $X$ by $U$.
+
+By additivity, we can further reduce to the case where $\alpha$ is
+the class of integral closed subschemes of $X \times Y$ finite 
+surjective over $X$. In this case, $\alpha \comp j = [Z \times_X 
+U].$ Since $k$ is perfect, by shrinking $X$ if necessary, we can
+assume that $Z$ is smooth over $k$. Recall $\alpha^* = p_*i^*q^*$ 
+(see Equation \ref{eq_2_5_a}) for the following setup:
+\[
+X \stackrel{p}{\longleftarrow} Z \stackrel{i}{\rightarrow} 
+   Z \times X \times Y \stackrel{q}{\rightarrow} Y.
+\]
+We are therefore left to prove naturality in each of the following
+three cases:
+
+\emph{First case : } If $\alpha = q$ is a flat morphism, 
+compatibility follows from the definition of flat pull-back of
+$\cmcohom^0(\cdot; \assocCM{F_*})$ from the definition of (D1).
 \end{proof}
