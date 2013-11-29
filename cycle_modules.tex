@@ -844,3 +844,40 @@ Then the following diagram is commutative:
 \end{diagram}
 \]
 \end{lem}
+\begin{proof}
+We use the construction of the Gysin triangle defined in [Deg08B].
+Consider the purity isomorphism defined in [Deg08B, 2.2.5]
+\[
+\purity{X, Z}: M_Z(X) \to M(Z)(c)[2c].
+\]
+By the preceding paragraphs, the isomorphism
+\begin{align*}
+\rho_{X, Z}: \cmcohom^{p - c}(Z; M)_{n - c} &\xrightarrow{\rho'_{X, Z}} \phi_n(M_Z(X)[-p]) \\
+&\xrightarrow{\phi(\purity{X, Z}} \phi_n(M(Z)(c)[2c - p]) = \phi_{n - c}(M(Z)[c - p])
+\end{align*}
+fits into the commutative diagram:
+\[
+\begin{diagram}
+\cmcohom^{p - 1}(U; M)_n & \rTo{\ptres{Z}{U}}      & \cmcohom^{p - c}(Z; M)_{n - c} & \rTo{i^*}         & \cmcohom^{p}(X; M) \\
+\dTo{\rho_U}             &                         & \dTo{\rho_{X, Z}}              &                   & \dTo{\rho_X}       \\
+                         &                         & \phi_{n - c}(M(Z)[c - p])      \\
+                         &                         & \dEquals                       \\
+\phi_n(M(U)[-p])         & \rTo{\phi_n{\res{X,Z}}} & \phi_n(M(Z)(c)[2c - p])        & \rTo{\phi_n(i^*)} & \phi_n(M(X)[-p]).
+\end{diagram}
+\]
+It suffices to show that $\rho_{X, Z} = \rho_Z$. Once again, by 
+the comments preceding the lemma, the map $\rho_{X, Z} - \rho_Z$
+is natural in $(X, Z)$ with respect to transverse maps. Let 
+$P_Z X$ be the projective closure of the normal bundle of $Z$ in 
+$X$. Consider the blow-up $B_Z(\A^1 \times X)$ of $Z \times \{0\}$
+in $X$, together with associated deformation diagram
+\[
+(X, Z) \xrightarrow{(d, i_1)} (B_Z(\A^1 \times X), \A^1 \times Z) 
+   \xleftarrow{(d', i_0)} (P_Z X, Z).
+\]
+The commutative squares corresponding to $(d, i_1)$ and 
+$(d', i_0)$ are transverse. Therefore, it suffices to consider 
+only the case where $(X, Z) = (P_Z X, Z)$. In this setting, the
+closed immersion $i$ admit a retraction and the map $\rho_{X, Z}$
+(resp $\rho_Z$) is determined uniquely by $\rho_X$.
+\end{proof}
