@@ -182,6 +182,8 @@ we represent by $\HI_*$.
 \vskip 10pt
 The complex \[\gersseq{M}\]
 
+\section{Cycle Module Functorialities}\label{sect_cm_funct}
+
 We write $\gcmplx{M}$ for the Gersten complex associated to the 
 cycle module $M$. Rost showed that associated to every flat 
 morphism $Y \to X$, there exists a contravariant morphism 
@@ -646,7 +648,7 @@ is an isomorphism. The two isomorphisms define:
    \hnis^p(X; F^M_X) \simeq \hnis(X; F^M).
 \end{equation}
 
-\begin{lem}
+\begin{lem}\label{lem_cm_hnis_equiv_morph}
 The isomorphism $\rho_X$ defined in Equation 
 \ref{eq_cm_hnis_equiv} is natural in $X$ with respect to any
 scheme morphisms.
@@ -1163,3 +1165,58 @@ In the setting of the preceding remarks, the isomorphism
 for a smooth scheme $X$ (cf. Equation \ref{eq_cm_hnis_equiv}) is 
 natural with respect to finite correspondences.
 \end{prop}
+\begin{proof}
+The proof follows the principle setup of the proof of Lemma
+\ref{lem_cm_hnis_equiv_morph}. Let $f: Y \to X$ be a flat morphism
+or a regular closed immersion between schemes of finite type. It 
+is clear that the constructions of \emph{loc. cit.} generalize and
+allow for the definition of canonical maps $\eta_f$ which fits into
+a commutative diagram in the derived category of abelian sheaves on
+$X_{\Nis}$
+\[
+\begin{diagram}
+F^M_X & \rTo{\tau_f} & Rf_*F^M_Y \\
+\dTo  &              & \dTo      \\
+M^*_X & \rTo{\eta_f} & Rf_*M^*_Y.
+\end{diagram}
+\]
+As established elsewhere, if $p: Z \to X$ is a finite map, it 
+induces (cf Section \ref{sect_cm_funct}) a map of complexes
+\[
+p_*: \gcmplx{M}(Z) \to \gcmplx{M}(X)
+\]
+which is natural in $X$ with respect to \'etale morphisms (cf. 
+[Ros96, (4.1)]). We obtain from this the canonical map
+\[
+tr_p: p_*M^*_Z \to M^*_X
+\]
+which induces the following commutative diagram in the derived 
+category\[
+\begin{diagram}
+Rp_*(F^M_Z) & \rTo{tr^0_p} & F^M_X \\
+\dTo        &              & \dTo  \\
+Rp_*M^*_Z   & \rTo{tr_p}   & M^*_X.
+\end{diagram}
+\]
+Resuming the proof of the proposition, it suffices to show that
+the naturality of $\rho_X$ for a finite correspondence $\alpha \in 
+\Cor(X, Y)$ where $\alpha$ corresponds to an integral closed 
+subscheme of $X \times Y$. Following the comments immediately 
+after Proposition \ref{prop_2_3}, we consider the morphism
+\[
+X \stackrel{p}{\leftarrow} Z \stackrel{i}{\rightarrow} 
+   Z \times X \times Y \stackrel{q}{\to} Y.
+\]
+By \emph{loc. cit}, $\alpha^* = p_*i^*q^*$. Applying the 
+preceding constructions, we obtain the following commutative
+diagram in the derived category of abelian groups:
+\[
+\begin{diagram}
+H^p(Y; F^M_Y) & \rTo{(\tau_q)_*} & H^p(Z \times X \times Y; F^M_Y) & \rTo{(\tau_i)_*} & H^p(Z; F^M_Z) & \rTo{(tr^0_p)_*} & H^p(X; F^M_X) \\
+\dTo          &                  & \dTo                            &                  & \dTo          &                  & \dTo          \\
+H^p(Y; M^*_Y) & \rTo{(\eta_q)_*} & H^p(Z \times X \times Y; M^*_Z) & \rTo{(\eta_i)_*} & H^p(Z; M^*_Z) & \rTo{(tr_p)_*}   & H^p(X; M^*_X).
+\end{diagram}
+\]
+Verify that the composition of maps in the first row coincides
+with $\alpha^*$ and the proposition follows.
+\end{proof}
