@@ -1057,13 +1057,13 @@ F_*(X)                    & \rTo{i^*}              & F_*(Z) \\
 \end{diagram}
 \]
 Considering the naturality of the structural morphism $\loopCM_*$
-of the homotopy module $F_*$, we reduce the case further to showing
+of the homotopy module $F_*$, we further reduce the to showing
 that the following diagram is commutative:
 \[
 \begin{diagram}
-\phi(M(X)(1)[2]) & \rTo{i^*} &                         &                 &            &                  & \phi(M(Z)(1)[2]) \\
-\dTo             &           &                         &                 &            &                  & \dEquals         \\
-\phi(M(U)(1)[2]) & \rTo{\nu} & \phi(M(\Gmpt \times U)) & rTo{\gamma_\pi} & \phi(M(U)) & \rTo{\res{X, Z}} & \phi(M(Z)(1)[2])
+\phi(M(X)(1)[2]) & \rTo{i^*} &                         &                  &            &                  & \phi(M(Z)(1)[2]) \\
+\dTo             &           &                         &                  &            &                  & \dEquals         \\
+\phi(M(U)(1)[2]) & \rTo{\nu} & \phi(M(\Gmpt \times U)) & \rTo{\gamma_\pi} & \phi(M(U)) & \rTo{\res{X, Z}} & \phi(M(Z)(1)[2])
 \end{diagram}
 \]
 where $\nu$ is the canonical inclusion, and $\gamma_\pi$ is 
@@ -1136,3 +1136,22 @@ Furthermore, for all integers $n > 0$,
 \end{align*}
 where the map is induced by the obvious injection of $\Gmpt^i 
 \times \{1\} \times \Gmpt^{n - 1 - i} \to \Gmpt^n$.
+
+\section{Functoriality of Gersten Resolution --- Part II}
+
+In this paragraph, we complete the results first promised in 3.2.
+Fix a cycle module $M$ and let $F^M$ denote the associated 
+homotopy module. We could extend the construction \emph{loc. cit.}
+to the case of a $k$-scheme of finite type $X$. In particular, we 
+associate to this scheme a complex of sheaves on $X_{\Nis}$
+\[
+M^*_X: V/X \to \gcmplx{M}(V)
+\]
+and a sheaf $F^M_X = \sheaf{H}^0(M^*_X)$. The complex $M^*_X$ 
+again satisfies the properties of Brown-Gersten but the canonical
+map
+\[
+F^M_X \to M^*_X
+\]
+need not be an isomorphism. Under this setup, we have the 
+following result:
