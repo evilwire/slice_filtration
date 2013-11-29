@@ -1084,3 +1084,55 @@ $\cmcohom^0(\cdot; \assocCM{F_*})$, of the latter, see Section
 with respect to $j_X: \Gmpt \times X \to \A^1 \times X$ and 
 $s_1: X \to \Gmpt \times X$.
 \end{proof}
+
+The preceding theorem shows that the category of cycle modules is
+symmetric monoidal with the neutral element given by the Milnor 
+$K$-theory functor. Furthermore, the tensor product is compatible
+with the shifts in grading of the cycle modules --- i.e. functors
+$-\{\pm 1\}$ in $\HI_*$.
+
+To all smooth scheme $X$, we can associate the following cycle 
+module $\assocCM{[X]}$.
+
+By the preceding theorem, the family of cycle modules 
+$\assocCM{[X]}\{n\}$ indexed by smooth scheme $X$ and integer 
+$n$ form the generators of the $\CycMod$.
+
+Note that tensor product is characterized by the behavior on 
+generators. In particular:
+\[
+\assocCM{[X]}\{n\} \otimes \assocCM{[Y]}\{m\} =
+\assocCM{[X \times Y]}\{n + m\}.
+\]
+Finally, we give an explicit formula for calculating the cycle 
+module associated to a smooth scheme $X$ and an integer $n$. 
+For all smooth schemes $X$ and $Y$, consider the group
+\[
+\pi(X, Y) = \cok (\Cor(\A^1 \times Y, X) 
+   \xrightarrow{s_0^* - s_1^*} \Cor(Y, X)).
+\]
+Note that this group extends to regular schemes essentially of 
+finite type over $k$ and that the above groups also commute with
+projective limits of schemes (cf. Deg07, 4.1.24). If $E$ is a 
+field of functions and $X$ is a smooth projective scheme, 
+$\pi(\spec(E), X) = \chow{0}{X_E}$, the Chow group of 0 cycles of
+$X$ extended to $E$.
+
+From the preceding remarks, we have the following: for all 
+function fields $E$ and all smooth projective schemes $X$,
+\[
+\assocCM{[X]}_0 . E = \chow{0}{X_E}.
+\]
+Here $- . -$ represents the intersection theory on cycle modules 
+developed in \cite{Ro96}.
+
+Furthermore, for all integers $n > 0$,
+\begin{align*}
+\assocCM{[X]}_n . E &= \cok\big( \bigoplus_{i = 0}^n 
+   \chow{0}{\Gmpt^{n - 1} \times X_E} \to 
+      \chow{0}{\Gmpt^n \times X_E}\big) \\
+\assocCM{[X]}_{-n} . E &= \ker\big(\pi(\mathbb{G}_{m,E}^n, X)
+   \to \bigoplus_{i = 0}^n \pi(\mathbb{G}_{m, E}^{n - 1}, X)\big)
+\end{align*}
+where the map is induced by the obvious injection of $\Gmpt^i 
+\times \{1\} \times \Gmpt^{n - 1 - i} \to \Gmpt^n$.
