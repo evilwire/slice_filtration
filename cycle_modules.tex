@@ -312,7 +312,7 @@ graded by
 This sequence is natural with respect to proper and flat pushout.
 We have the following proposition:
 
-\begin{prop}
+\begin{prop}\label{prop_2_6}
 Consider the following cartesian square:
 \[
 \begin{diagram}
@@ -387,7 +387,7 @@ To conclude, it suffices to point out that the maps $p^*$,
 $p_T^*$ and $p_U^*$ are quasi-isomorphisms.
 \end{proof}
 
-\begin{cor}
+\begin{cor}\label{cor_2_8}
 Consider the following cartesian square:
 \[
 \begin{diagram}
@@ -417,11 +417,11 @@ map induced by $f$. Then, the following diagram is commutative:
 \]
 \end{cor}
 
-\begin{rmk}
-In [Deg08B], a closed pair is a couple $(X, Z)$ such that $X$ is a
-smooth scheme and $Z$ is a closed subscheme. We say that $(X, Z)$ 
-is \emph{smooth} (resp. \emph{of codimension $n$}) if $Z$ is 
-smooth (resp.  purely of codimension $n$ in $X$).  
+\begin{rmk}\label{rmk_2_9}
+In [Deg08B], a \emph{closed pair} is a couple $(X, Z)$ such that 
+$X$ is a smooth scheme and $Z$ is a closed subscheme. We say that 
+$(X, Z)$ is \emph{smooth} (resp. \emph{of codimension $n$}) if 
+$Z$ is smooth (resp.  purely of codimension $n$ in $X$).  
 
 If $i: Z \to X$ is the associated closed immersion, a 
 \emph{morphism of closed pairs} $(f, g)$ is a commutative square
@@ -788,3 +788,39 @@ commutative:
 \]
 Here, we again use the fact that the complex $M^*_X$ satisfy the
 properties of Brown-Gersten.
+
+The arrow (1) is a quasi-isomorphism by the five lemma, since so 
+are the other two vertical maps. Consider the motive $M_Z(X)$ 
+associated to the closed pair $(X, Z)$ -- cf. 3.1 D4. Via the 
+quasi-isomorphism (1) and the canonical identification of
+$H_Z^p(X; F^M)_n$ with $\phi_n(M_Z(X)[-p])$, we obtain the 
+following commutative diagram:
+\[
+\begin{diagram}
+\cmcohom^{p - 1}(U; M)_n & \rTo{\;\;\;\ptres{Z}{U}\;\;\;} 
+                         & \cmcohom^{p - c}(Z; M)_{n - c} 
+                         & \rTo{\;\;\;i^*\;\;\;} 
+                         & \cmcohom(X; M)_n \\
+\dTo{\rho_U}             &                                
+                         & \dTo{\rho'_{X, Z}}                
+                         &                       
+                         & \dTo{\rho_X}        \\
+\phi_n(M(U)[-p]          & \rTo                           
+                         & \phi_n(M_Z(X)[-p])             
+                         & \rTo                  
+                         & \phi_n(M(X)[-p])
+\end{diagram}
+\]
+in which the vertical arrows are isomorphisms. The map 
+$\rho'_{X,Z}$ is natural in $(X, Z)$ with respect to transverse 
+maps (defined in Remark \ref{rmk_2_9}). This in effect follows
+from Corollary \ref{cor_2_8}, or more precisely from the 
+commutative diagram appearing in the proof of Proposition, 
+\ref{prop_2_6} using on the one hand the uniqueness of the map (1), 
+and on the other hand the description of the functoriality derived 
+from $M^*_X$ established here --- i.e. the natural transformations 
+$\tau_f$ and $\tau_i$.
+
+As consequence of this construction, we have the following key 
+lemma:
+
