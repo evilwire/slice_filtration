@@ -824,3 +824,23 @@ $\tau_f$ and $\tau_i$.
 As consequence of this construction, we have the following key 
 lemma:
 
+\begin{lem}
+Consider the Gysin triangle (cf. [Voev00B, 3.5.4]) associated to
+a closed pair $(X, Z)$ with $i: Z \to X$ a closed immersion of
+pure codimension equal to $c$ with complement open immersion $U 
+\to X$:
+\[
+M(U) \to M(X) \stackrel{i^*}{\to} M(Z)(c)[2c] 
+   \stackrel{\res{X, Z}}{\to} M(U)[1].
+\]
+Then the following diagram is commutative:
+\[
+\begin{diagram}
+\cmcohom^{p - 1}(U; M)_n & \rTo{\ptres{Z}{U}}      & \cmcohom^{p - c}(Z; M)_{n - c} & \rTo{i^*}         & \cmcohom^{p}(X; M) \\
+\dTo{\rho_U}             &                         & \dTo{\rho_Z}                   &                   & \dTo{\rho_X}       \\
+                         &                         & \phi_{n - c}(M(Z)[c - p])      \\
+                         &                         & \dEquals                       \\
+\phi_n(M(U)[-p])         & \rTo{\phi_n{\res{X,Z}}} & \phi_n(M(Z)(c)[2c - p])        & \rTo{\phi_n(i^*)} & \phi_n(M(X)[-p]).
+\end{diagram}
+\]
+\end{lem}
