@@ -836,11 +836,19 @@ M(U) \to M(X) \stackrel{i^*}{\to} M(Z)(c)[2c]
 Then the following diagram is commutative:
 \[
 \begin{diagram}
-\cmcohom^{p - 1}(U; M)_n & \rTo{\ptres{Z}{U}}      & \cmcohom^{p - c}(Z; M)_{n - c} & \rTo{i^*}         & \cmcohom^{p}(X; M) \\
-\dTo{\rho_U}             &                         & \dTo{\rho_Z}                   &                   & \dTo{\rho_X}       \\
-                         &                         & \phi_{n - c}(M(Z)[c - p])      \\
-                         &                         & \dEquals                       \\
-\phi_n(M(U)[-p])         & \rTo{\phi_n{\res{X,Z}}} & \phi_n(M(Z)(c)[2c - p])        & \rTo{\phi_n(i^*)} & \phi_n(M(X)[-p]).
+\cmcohom^{p - 1}(U; M)_n & \rTo{\ptres{Z}{U}}      
+   & \cmcohom^{p - c}(Z; M)_{n - c} & \rTo{i^*}         
+   & \cmcohom^{p}(X; M) \\
+\dTo{\rho_U}             &                         
+   & \dTo{\rho_Z}                   &                   
+   & \dTo{\rho_X}       \\
+                         &                         
+                         & \phi_{n - c}(M(Z)[c - p])      \\
+                         &                         
+                         & \dEquals                       \\
+\phi_n(M(U)[-p])         & \rTo{\phi_n{\res{X,Z}}} 
+   & \phi_n(M(Z)(c)[2c - p])        & \rTo{\phi_n(i^*)} 
+   & \phi_n(M(X)[-p]).
 \end{diagram}
 \]
 \end{lem}
@@ -858,11 +866,19 @@ By the preceding paragraphs, the isomorphism
 fits into the commutative diagram:
 \[
 \begin{diagram}
-\cmcohom^{p - 1}(U; M)_n & \rTo{\ptres{Z}{U}}      & \cmcohom^{p - c}(Z; M)_{n - c} & \rTo{i^*}         & \cmcohom^{p}(X; M) \\
-\dTo{\rho_U}             &                         & \dTo{\rho_{X, Z}}              &                   & \dTo{\rho_X}       \\
-                         &                         & \phi_{n - c}(M(Z)[c - p])      \\
-                         &                         & \dEquals                       \\
-\phi_n(M(U)[-p])         & \rTo{\phi_n{\res{X,Z}}} & \phi_n(M(Z)(c)[2c - p])        & \rTo{\phi_n(i^*)} & \phi_n(M(X)[-p]).
+\cmcohom^{p - 1}(U; M)_n & \rTo{\ptres{Z}{U}}      
+   & \cmcohom^{p - c}(Z; M)_{n - c} & \rTo{i^*}         
+   & \cmcohom^{p}(X; M) \\
+\dTo{\rho_U}             &                         
+   & \dTo{\rho_{X, Z}}              &                   
+   & \dTo{\rho_X}       \\
+                         &                         
+                         & \phi_{n - c}(M(Z)[c - p])      \\
+                         &                         
+                         & \dEquals                       \\
+\phi_n(M(U)[-p])         & \rTo{\phi_n{\res{X,Z}}} 
+   & \phi_n(M(Z)(c)[2c - p])        & \rTo{\phi_n(i^*)} 
+   & \phi_n(M(X)[-p]).
 \end{diagram}
 \]
 It suffices to show that $\rho_{X, Z} = \rho_Z$. Once again, by 
@@ -881,3 +897,13 @@ only the case where $(X, Z) = (P_Z X, Z)$. In this setting, the
 closed immersion $i$ admit a retraction and the map $\rho_{X, Z}$
 (resp $\rho_Z$) is determined uniquely by $\rho_X$.
 \end{proof}
+
+We are now ready to prove the main theorem on the correspondence 
+between cycle modules and homotopy modules.
+
+\begin{thm}\label{thm_corresp_cyc_mod_hom_mod}s
+The functors
+\begin{align*}
+\HI_* &\leftrightarrow \CycMod
+\end{align*}
+\end{thm}
