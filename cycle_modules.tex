@@ -220,7 +220,7 @@ of the normal cone, following the original idea of Rost (cf
 We will use the following result due to Rost ([Ros96, 12.4]),
 which partially describes the Gysin morphism:
 
-\begin{prop}
+\begin{prop}\label{prop_2_3}
 Let $X$ be an integral scheme with function field $E$, and let $i: 
 Z \to X$ be the closed immersion of a regular irreducible 
 principal divisor, parametrized by $\idprime{p} \in \O_X(X)$. Let 
@@ -445,7 +445,7 @@ associated to a cycle module $M$ and a closed pair $(X, Z)$ is
 natural with respect to transverse morphisms.
 \end{rmk}
 
-\subsection{Associated homotopy module}
+\subsection{Associated homotopy module}\label{subsect_assoc_hm}
 
 Let $M$ be a cycle module, and write 
 \[
@@ -521,14 +521,14 @@ $(F_*, \loopCM_n)$ can be identified with a functor $\phi: \DM_{gm}
 \to \Ab$, and let $\widehat{\phi}$ be its canonical extension to
 the category of pro-$\DM_{gm}$. As established in [Deg08B, 6.2.1],
 the restriction of $\widehat{\phi}$ to $\GenMot$ is a cycle module
-that we write as $\widehat{F}_*$, and that we call the generic
+that we write as $\assocCM{F_*}$, and that we call the generic
 transformation of $F_*$.
 
 We reiterate some key parts of its construction from [Deg08B]. 
 First, note that for all generic motif $M(E)\{n\}$, 
-$\widehat{\phi}(M(E)\{n\}) = \widehat{F}_{-n}(E)$ is nothing
+$\widehat{\phi}(M(E)\{n\}) = \assocCM{F_{-n}}(E)$ is nothing
 but the fiber of $F_{-n}$ at $E$ (cf. 1.4). We can also interpret
-the generic transformation $\widehat{F}$ as a system of fibers 
+the generic transformation $\assocCM{F}$ as a system of fibers 
 of $F$, together with specialization morphisms between them,
 which satisfy the following structure axioms of cycle premodules:
 
@@ -560,7 +560,7 @@ F_n(X)
 \]
 where $\nu$ is the canonical inclusion. This morphism is 
 compatible with the restriction to an open subscheme of $X$, and 
-induced the desired morphism for $\widehat{F}_*$.
+induced the desired morphism for $\assocCM{F_*}$.
 
 \item[\textbf{D4.}] Following Deg08B, 5.4, Let $E$ be a function 
 field, and $v$ a valuation on $E$. We could find a smooth scheme
@@ -591,7 +591,7 @@ F_n(U) &= \phi_n(M(U)) \xrightarrow{\phi_n(\res{X,Z}')}
 \end{align*}
 where we write $\phi_n(\mathcal{M}) = \phi(\mathcal{M}(n)[2n])$
 for a motive $\mathcal{M}$. The residue morphism of the cycle
-module $\widehat{F}_*$ is given by the inductive limit of the
+module $\assocCM{F_*}$ is given by the inductive limit of the
 morphisms $\res{U, Z \cap U}$ given by the neighborhood $U$ of
 $x \in X$.
 \end{enumerate}
@@ -905,8 +905,88 @@ between cycle modules and homotopy modules.
 The functors
 \begin{align*}
 \HI_* &\leftrightarrows \CycMod \\
-F_* & \mapsto \widehat{F}_*    \\
+  F_* & \mapsto \assocCM{F_*}   \\
 F^M_* & \mapsfrom M
 \end{align*}
 are equivalence of categories from one to the other.
 \end{thm}
+\begin{proof}
+It suffices to construct the two natural isomorphisms which
+realize equivalence.
+
+\textbf{First isomorphism}: Fix a cycle module $M$, and $F^M_*$ the
+associated homotopy module. By definition, for all function field
+$E$, there exists canonical maps
+\[
+a_E: \assocCM{F^M_n}(E) = \varinjlim_{A \subset E} 
+   \cmcohom^0(\spec(A); M)_n \to M_n(E).
+\]
+That this is an isomorphism is clear, and it remains to show that
+$a$ defines a morphism of cycle modules. The compatibility with 
+(D1) is evident. The compatibility with D2 follows from the fact 
+that for all finite surjective maps $f: Y \to X$, the map 
+$\cmcohom^0(f; M)$ is the proper pushout $f_*$ (cf. Deg08B, 6.6).
+
+\emph{Compatibility to (D3) : } resuming the setup of (D3) of
+(3.1) for the homotopy module $F^M_*$ and for a unit $x \in 
+E^\times$. We consider the canonical map
+\[
+a_E': \assocCM{F^M_n}(\Gmpt \times E) = \varinjlim_{A \subset E}
+\cmcohom^0(\spec(A[t, t^{-1}]); M)_n \to M_n(E(t)).
+\]
+For all $E$-point $y$ of $\spec E[t]$, let $v_y$ denote the 
+corresponding valuation of $E(t)$ with uniformizing parameter
+$t - y$. By Proposition \ref{prop_2_3}, the following diagram is
+commutative:
+\[
+\begin{diagram}
+\assocCM{F^M_n}(\Gmpt \times (E))   & \rTo{\Special{x}{*}}        & \assocCM{F^M_n}(E)   \\
+\dTo{a'_E}                          &                             & \dTo{a_E}            \\
+\phi_n(E(t))                        & \rTo{\Special{v_x}{t - x}} & \phi_n(E).
+\end{diagram}
+\]
+By the definition of structure map $\loopCM_*$ of $F^M_*$ (cf. 
+Subsection \ref{subsect_assoc_hm}), the map $\nu': 
+\assocCM{F^M_{n - 1}}(E) \xrightarrow{\epsilon_n - 1} 
+(\assocCM{F^M_n})_{-1}(E) \stackrel{\nu}{\to} 
+\assocCM{F^M_n}(\Gmpt \times (E))$ is the section of the short 
+exact sequence
+\[
+0 \to \assocCM{F^M_n}(E) \stackrel{p^*}{\to} 
+   \assocCM{F^M_n}(\Gmpt \times (E)) \stackrel{\partial}{\to}
+   \assocCM{F^M_{n - 1}}(E) \to 0
+\]
+which correspond to the retraction $s_1^*$ of $p^*$, for $s_1: 
+(E) \to \Gmpt \times (E)$ the unit section of the projection $p: 
+\Gmpt \times (E) \to (E)$. In particular, $\nu'$ is characterized 
+by the prperties $\partial\nu' = 1$ and $s_1^*\nu' = 0$.
+
+Let $\iota: E \to E(t)$ denote the canonical inclusion. Using the
+cycle premodule relations, we can verify the following facts:
+\begin{enumerate}
+\item[(1)] for all $\rho \in M_n(E)$, 
+   $\res{v_0}(\{t\} \cdot \iota_*(\rho)) = \rho$.
+
+\item[(2)] for all $y \in E^\times$ and $\rho \in M_n(E)$, 
+   $\res{v_y}(\{t\} \cdot \iota_*(\rho)) = 0$.
+
+\item[(3)] for all $y \in E^\times$ and $\rho \in M_n(E)$,
+   $\Special{v_y}{t - y}(\{t - y\} \cdot \iota_*(\rho) = \{y\} 
+      \cdot \rho$.
+\end{enumerate}
+By (2), the map $M_n(E) \to M_n(E(t))$, given by $\rho \mapsto 
+\{t\} \cdot \iota_*(\rho)$ induces a unique map in the following
+commutative diagram as the dotted arrow in the first line:
+\[
+\begin{diagram}
+\assocCM{F^M_n}(E) & \rDotsto                  & \assocCM{F^M_n}(\Gmpt \times (E)) \\
+\dTo{a_E}          &                           & \dTo{a'_E}                        \\
+M_n(E(t))          & \rTo{\{t\} \cdot \iota_*} & M_n(E).
+\end{diagram}
+\]
+By the relations (1) and (3), with $y = 1$, the dotted arrow 
+satisfy the two properties characterizing $\nu'$. Hence we 
+conclude from (3) with $y = x$ that $\nu' \comp s_x^*(\rho) = 
+\{x\} \cdot \rho$ which proves the desired relation for 
+(D3).
+\end{proof}
