@@ -1039,5 +1039,48 @@ the graph of $p$, viewed as a finite correspondence from $X$ to
 $Y$ (see D2). In this case, naturality follows from the definition 
 of proper pushout on $\cmcohom^0$ and from the definition of D2.
 
-\emph{Third case : }
+\emph{Third case : } Suppose $\alpha = i$ for $i: Z \to X$ a
+regular closed immersion between smooth schemes. As we have 
+already seen, the statement of naturality is local in $X$. 
+Therefore, by factoring $i$, we make the reduction to the case
+where $Z$ is of codimension 1. We can also assume that $Z$ is a
+principal divisor parametrized by $\pi \in \O_X(U)$, where $U =
+X - Z$.
+
+By Proposition \ref{prop_2_3}, we are reduced to showing that
+the following diagram is commutative:
+\[
+\begin{diagram}
+F_*(X)                    & \rTo{i^*}              & F_*(Z) \\
+\dTo                      &                        & \dTo   \\
+\assocCM{F_*}(\fields(X)) & \rTo{\Special{v}{\pi}} & \assocCM{F_*}(\fields(Z))
+\end{diagram}
+\]
+Considering the naturality of the structural morphism $\loopCM_*$
+of the homotopy module $F_*$, we reduce the case further to showing
+that the following diagram is commutative:
+\[
+\begin{diagram}
+\phi(M(X)(1)[2]) & \rTo{i^*} &                         &                 &            &                  & \phi(M(Z)(1)[2]) \\
+\dTo             &           &                         &                 &            &                  & \dEquals         \\
+\phi(M(U)(1)[2]) & \rTo{\nu} & \phi(M(\Gmpt \times U)) & rTo{\gamma_\pi} & \phi(M(U)) & \rTo{\res{X, Z}} & \phi(M(Z)(1)[2])
+\end{diagram}
+\]
+where $\nu$ is the canonical inclusion, and $\gamma_\pi$ is 
+induced by $\pi: U \to \Gmpt$ and $\res{X, Z} = \res{X,Z}' \comp 
+\purity{X, Z}^{-1}$ in the notation of point (D4) is the residue
+morphism on the level motives. As such, the commutativity of the 
+diagram result precisely from Deg08B, 2.6.5.
+
+The map $b: F_* \to \cmcohom^0(\cdot; \assocCM{F_*})$ is therefore
+a transfer map. In fact, it is clear that the induced map on the sections
+of any function fields is an isomorphism. It follows from Deg08B, 1.4
+that $b$ is itself an isomorphism.
+
+Finally, it is straightforward to show that $b$ is compatible with
+the structure map of the homotopy modules $F_*$ and 
+$\cmcohom^0(\cdot; \assocCM{F_*})$, of the latter, see Section
+\ref{subsect_assoc_hm}. Indeed, apply the functoriality of $b$ 
+with respect to $j_X: \Gmpt \times X \to \A^1 \times X$ and 
+$s_1: X \to \Gmpt \times X$.
 \end{proof}
