@@ -1235,3 +1235,55 @@ The preceding proposition has the following immediate corollay:
 With the isomorphism $\epsilon_X$ defined as above, it is natural
 in $X$ with respect to all finite correspondences.
 \end{cor}
+
+Consider the homotopy module $\Ox$. By the theorem of 
+Suslin-Voevodsky recalled in 1.11, for all function fields $E$, 
+$\assocCM{\Ox} \simeq \milK_*(E)$. Moreover, this isomorphism is
+compatible with the structure of cycle modules. For the norm map,
+this follows from [SV00, 3.4.1]. For the residue map associated to
+a function field $E$ with valuation $v$, we reduce to showing that
+$\res{v}(\pi) = 1$ for the cycle module $\assocCM{\Ox}$, which 
+follows from [Deg07, 2.6.5].
+
+We obtain from this the isomorphism of Bloch\footnote{In effect, 
+by the isomorphism that we just explained, the graded sheaf $\Ox$
+is the sheaf associated with the unramnified Milnor $K$-theory.} 
+for all smooth scheme $X$:
+\[
+\epsilon_B: \hnis^n(X; (\Ox)^{\otimes n}) \to \cmcohom^n(X; 
+\milK_*)_n = \chow{n}{X}.
+\]
+It follows from the above discussion that this isomorphism is 
+compatible with transfers. Recall that for all cycle module $M$, 
+there exists a pairing $\milK_* \times M \to M$ in the sense of
+[Ros96, 1.2]. By [Ros96, par. 14] This induces a pairing
+\[
+\chow{n}{X} \otimes \cmcohom^m(X; M)_r \to 
+   \cmcohom^{m + n}(X; M)_{r + n}.
+\]
+Considering a homotopy module $F_*$, we have an (iso)morphism of
+homotopy modules $\Ox \otimes F_* \to F_*$. For a smooth scheme 
+$X$ with diagonal map $\delta: X \to X \times X$, we get a pairing
+\[
+H^n(X; \Ox)_n \otimes H^m(X; F_*)_r \to H^{m + n}(X; F_*)_{r + n}
+\]
+defined via two morphisms: $a: [X] \to \Ox(n)[3n]$ and $b: [X] \to
+F_*(r)[2r + m]$ in the composition
+\begin{align*}
+[X] \stackrel{\delta_*}{\to} [X] \otimes [X] 
+   \xrightarrow{a \otimes b} \Ox \otimes 
+   F_*(n + r)[2(n + r) + (n + m)] \stackrel{\sim}{\rightarrow}
+   F_*(n + r)[2(n + r) + (n + m)]
+\end{align*}
+We leave the following compatibility result to the reader
+\begin{lem}
+With the notations introduced above, the following diagram
+is commutative:
+\[
+\begin{diagram}
+H^n(X; \Ox)_n \otimes H^m(X; F_*)_r                & \rTo & H^{n + m}(X; F_*)_{n + r} \\
+\dTo{\epsilon_X^B} \otimes \epsilon_X              &      & \dTo{\epsilon_X}          \\
+\chow{n}{X} \otimes \cmcohom^m(X; \assocCM{F_*})_r & \rTo & \cmcohom^{m + n}(X; \assocCM{F_*})_{n + r}.
+\end{diagram}
+\]
+\end{lem}
