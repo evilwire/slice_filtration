@@ -1276,7 +1276,7 @@ F_*(r)[2r + m]$ in the composition
    &\stackrel{\sim}{\rightarrow} F_*(n + r)[2(n + r) + (n + m)]
 \end{align*}
 We leave the following compatibility result to the reader
-\begin{lem}
+\begin{lem}\label{lem_3_14}
 With the notations introduced above, the following diagram
 is commutative:
 \[
@@ -1323,7 +1323,7 @@ With the above setup, the following square is commutative:
 \begin{proof}
 The proof of the proposition will rely on the following lemma:
 
-\begin{lem}
+\begin{lem}\label{lem_3_17}
 Let $X$ be a smooth scheme, and $E/X$ a vector bundle of rank $n$. 
 Let $p: P \to X$ be the associated projective bundle, and 
 $\lambda$ the canonical bundle on $P$ such that $\lambda \subset 
@@ -1337,4 +1337,11 @@ Then the following map is an isomorphism:
 x_i &\mapsto p^*(x_i) \cdot c^i.
 \end{align*}
 \end{lem}
+\begin{proof}[Proof of Lemma.]
+Apply the theorem of projective bundle in $\DM_{gm}$ (cf. 
+[Voe00B, 2.5.1]) and look at the image under $\phi$ given in 
+Lemma \ref{lem_3_14}.
+\end{proof}
+
+Let 
 \end{proof}
