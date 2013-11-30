@@ -1308,3 +1308,33 @@ Let $f: Y \to X$ be a projective morphism of smooth schemes of
 constant relative dimension $d$. In [Deg08A, 2.7], we constructed
 the Gysin map $f^*: M(X)(d)[2d] \to M(Y)$ associated to $f$ in 
 $\DM_{gm}$.
+
+\begin{prop}
+With the above setup, the following square is commutative:
+\[
+\begin{diagram}
+\phi(M(X)\{d - r\}[d - n])                 & \rTo{\phi(f^*)} & \phi(M(Y)\{-r\}[-n]) \\
+\dTo{\epsilon_X}                           &                 & \epsilon_Y           \\
+\cmcohom^{n - d}(X; \assocCM{F_*})_{r - d} & \rTo{f_*}       & \cmcohom^n(Y; \assocCM{F_*})_r.
+\end{diagram}
+\]
+\end{prop}
+
+\begin{proof}
+The proof of the proposition will rely on the following lemma:
+
+\begin{lem}
+Let $X$ be a smooth scheme, and $E/X$ a vector bundle of rank $n$. 
+Let $p: P \to X$ be the associated projective bundle, and 
+$\lambda$ the canonical bundle on $P$ such that $\lambda \subset 
+p^{-1}(E)$. We write $c = c_1(\lambda) \in \chow{1}{X}$ for the 
+first Chern class of $\lambda$.
+
+Then the following map is an isomorphism:
+\begin{align*}
+\bigoplus_{i = 0}^n \cmcohom^*(X; \assocCM{F_*}) 
+   &\to \cmcohom^*(P; \assocCM{F_*}) \\
+x_i &\mapsto p^*(x_i) \cdot c^i.
+\end{align*}
+\end{lem}
+\end{proof}
